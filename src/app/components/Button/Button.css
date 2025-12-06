@@ -1,0 +1,10 @@
+.button {
+    padding: 7px 1px;
+}
+
+button {
+    letter-spacing: -0.5px;
+    border: 1px solid #ccddc7;
+    border-radius: 40px;
+    padding: 15px 23px;
+}

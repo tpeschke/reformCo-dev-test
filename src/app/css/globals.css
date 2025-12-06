@@ -5,6 +5,7 @@
 
 :root {
   background: #FBFAF6;
+  padding: 32px
 }
 
 title,
@@ -12,50 +13,51 @@ h1,
 h5,
 p {
   font-family: 'sohne';
+  font-weight: 100;
 }
 
 h1,
 h5 {
-  letter-spacing: -3%;
-  line-height: 120%;
+  letter-spacing: -3.25px;
+  line-height: 91%;
 }
 
 h1 {
-  size: 112pt;
+  font-size: 112px;
 }
 
 h5 {
-  size: 48pt;
+  font-size: 48px;
 }
 
 title {
-  size: 12pt
+  font-size: 12px
 }
 
 p.xl {
-  size: 28px
+  font-size: 28px
 }
 
 p.l {
-  size: 24px
+  font-size: 24px
 }
 
 p {
-  letter-spacing: -3%;
+  letter-spacing: -3.25px;
   line-height: 140%;
-  size: 20px
+  font-size: 20px
 }
 
 p.s {
-  size: 16px
+  font-size: 16px
 }
 
 p.xs {
-  size: 14px
+  font-size: 9px
 }
 
 p.xxs {
-  size: 12px
+  font-size: 12px
 }
 
 .black {
@@ -92,4 +94,40 @@ p.xxs {
 
 .green100 {
   color: #CCDDC7
+}
+
+.green100-border {
+  border: 1px solid #CCDDC7;
+  border-radius: 10px;
+}
+
+.orange {
+  color: #D87906
+}
+
+button {
+  background: unset;
+  border: unset;
+  font-family: 'sohne';
+  font-weight: 100;
+}
+
+img {
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 50%;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-column-separate {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
