@@ -112,6 +112,7 @@ img.object-cover {
 .flex-center {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .flex-wrap {

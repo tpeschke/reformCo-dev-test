@@ -5,51 +5,49 @@ import './CardSlide.css'
 import { useGSAP } from "@gsap/react";
 import gsap from 'gsap';
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import foxx from '../../../../../../public/images/cards/card1.png'
 import bott from '../../../../../../public/images/cards/card2.png'
 import alvarez from '../../../../../../public/images/cards/card3.png'
 import wilder from '../../../../../../public/images/cards/card4.png'
 
-import { useState } from "react";
+import horizontalLoop from '@/app/components/Header/components/utilities/horizontalLoop';
 
 export default function CardSlide() {
-    const [insuranceCards, setInsuranceCards] = useState<StaticImageData[]>([
+    const insuranceCards = [
+        foxx,
+        bott,
+        wilder,
         alvarez,
         foxx,
         bott,
-        wilder
-    ])
+        wilder,
+        alvarez
+    ]
 
     gsap.registerPlugin(useGSAP);
 
-    const updateInsuranceCardOrder = (insuranceCards: StaticImageData[]) => {
-        return () => {
-            let newInsuranceCardOrder = [...insuranceCards]
-            const lastElement = newInsuranceCardOrder.pop()
-
-            if (lastElement) {
-                newInsuranceCardOrder.unshift(lastElement)
-            }
-
-            setInsuranceCards(newInsuranceCardOrder)
-        }
-    }
-
     useGSAP(() => {
-        gsap.timeline()
-            .to(".card-item", { xPercent: 100, duration: 2 })
-            .to(".card-item", { scale: 1.25, duration: 2 }, "+=1")
-            .to(".card-item", { scale: 1, duration: 2 }, "+=2")
-            .set(".card-item", { xPercent: 0, onComplete: updateInsuranceCardOrder(insuranceCards) })
-    }, [insuranceCards]);
+        const items = gsap.utils.toArray(".card-item")
+        const timeline = horizontalLoop(items, {
+            paused: true
+        })
+
+        setInterval(() => {
+            timeline.next({duration: 0.5})
+        }, 1000)
+    });
 
     return (
         <div className="card-slide-component flex-center card">
             <div className='card-slide-stripe flex-center'>
-                {insuranceCards.map(card => {
-                    return <Image className='card-item' key={card.src} src={card} alt={"example insurance card"} />
+                {insuranceCards.map((card, index) => {
+                    return (
+                        <div key={index} className='card-item flex-center'>
+                            <Image src={card} alt={"example insurance card"} />
+                        </div>
+                    )
                 })}
             </div>
         </div>
