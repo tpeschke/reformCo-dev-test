@@ -17,5 +17,6 @@
 
 .bottom-cards-component .card:first-child p {
     letter-spacing: -.7px;
-    width: 78%;
+    width: calc(628px - 10vw);
+    max-width: 100%;
 }
