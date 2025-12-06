@@ -1,4 +1,3 @@
-import styles from "./css/page.module.css";
 import Header from "./components/Header/Header";
 import BottomCards from "./components/BottomCards/BottomCards";
 

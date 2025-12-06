@@ -1,10 +1,19 @@
-.button {
+.button-component {
     padding: 7px 1px;
+    display: flex;
+    justify-content: space-between;
+    width: 283px;
 }
 
-button {
+.button-component button {
     letter-spacing: -0.5px;
     border: 1px solid #ccddc7;
     border-radius: 40px;
     padding: 15px 23px;
+}
+
+.button-component .circle {
+    border-radius: 100%;
+    padding: 25px;
+    border: 1px solid #ccddc7;
 }

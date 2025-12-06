@@ -1,5 +1,5 @@
 .header-component {
-    margin: 111px 0 92px;
+    margin: 7.7vw 0 6.4vw;
     display: flex;
     flex-wrap: wrap;
     align-items: end;
@@ -14,12 +14,20 @@
 }
 
 .header-component .marquee-component {
+    margin: 0 39px -2px 25px;
     width: 46vw;
     height: 77px;
-    margin: 0 39px 0 25px;
     overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .header-component .marquee-component p {
     text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.header-component .marquee-component img {
+    margin: 0 15px;
 }

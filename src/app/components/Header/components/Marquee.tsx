@@ -1,3 +1,6 @@
+import Image from "next/image";
+import idCardIcon from '../../../../../public/images/id-card-icon.svg'
+
 export default function Marquee() {
     const complaints = [
         "unpredictable rate increases",
@@ -9,7 +12,14 @@ export default function Marquee() {
 
     return (
         <span className="marquee-component green100-border">
-            {complaints.map((complaint) => <p key={complaint} className="xs orange">{complaint}</p>)}
+            {complaints.map((complaint) => {
+                return (
+                    <>
+                        <p key={complaint} className="title orange">{complaint}</p>
+                        <Image src={idCardIcon} alt={""} />
+                    </>
+                )
+            })}
         </span>
     )
 }

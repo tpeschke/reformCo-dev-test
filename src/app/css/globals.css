@@ -8,7 +8,6 @@
   padding: 32px
 }
 
-title,
 h1,
 h5,
 p {
@@ -30,12 +29,8 @@ h5 {
   font-size: 48px;
 }
 
-title {
+p.title {
   font-size: 12px
-}
-
-p.xl {
-  font-size: 28px
 }
 
 p.l {
@@ -43,21 +38,12 @@ p.l {
 }
 
 p {
-  letter-spacing: -3.25px;
   line-height: 140%;
   font-size: 20px
 }
 
 p.s {
   font-size: 16px
-}
-
-p.xs {
-  font-size: 9px
-}
-
-p.xxs {
-  font-size: 12px
 }
 
 .black {
@@ -112,7 +98,8 @@ button {
   font-weight: 100;
 }
 
-img {
+/* TODO remove */
+img.object-cover {
   color: transparent;
   position: absolute;
   top: 0;
