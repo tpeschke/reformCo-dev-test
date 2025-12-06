@@ -18,6 +18,6 @@
     white-space: nowrap;
 }
 
-.marquee-component img {
-    margin: 0 30px;
+.marquee-component .icon {
+    min-width: 77px;
 }

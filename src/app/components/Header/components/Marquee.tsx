@@ -8,9 +8,6 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import horizontalLoop from './utilities/horizontalLoop';
 
-// TODO the icon at the very end of the loop doesn't have a margin on the right
-// I can't use margins or padding: you have to wrap the thing in a div with the extra space you want via its width
-
 export default function Marquee() {
     const complaints = [
         "claim denials",
@@ -37,7 +34,9 @@ export default function Marquee() {
                     return (
                         <Fragment key={index}>
                             <p className="marquee-item title orange">{complaint}</p>
-                            <Image className='marquee-item' src={idCardIcon} alt={"id card icon"} />
+                            <div className='marquee-item icon flex-center'>
+                                <Image src={idCardIcon} alt={"id card icon"} />
+                            </div>
                         </Fragment>
                     )
                 })}
