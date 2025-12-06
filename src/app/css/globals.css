@@ -126,6 +126,10 @@ img {
   align-items: center;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .flex-column-separate {
   display: flex;
   justify-content: space-between;

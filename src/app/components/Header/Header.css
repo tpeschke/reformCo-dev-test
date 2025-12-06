@@ -1,23 +1,25 @@
-.header-component h1 {
+.header-component {
     margin: 111px 0 92px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: end;
 }
 
-.header-component h1>em {
-    margin: 0 20px;
-    display: contents;
+.header-component h1 {
+    margin-right: 19px;
+}
+
+.header-component h1:last-child {
+    margin-right: 0;
 }
 
 .header-component .marquee-component {
+    width: 46vw;
     height: 77px;
-    width: 45vw;
+    margin: 0 39px 0 25px;
     overflow: hidden;
-    display: contents;
 }
 
 .header-component .marquee-component p {
     text-transform: uppercase;
-    display: contents;
 }
