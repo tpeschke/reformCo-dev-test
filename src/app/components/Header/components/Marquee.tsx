@@ -17,7 +17,7 @@ export default function Marquee() {
                 return (
                     <Fragment key={complaint}>
                         <p className="title orange">{complaint}</p>
-                        <Image src={idCardIcon} alt={""} />
+                        <Image src={idCardIcon} alt={"id card icon"} />
                     </Fragment>
                 )
             })}
