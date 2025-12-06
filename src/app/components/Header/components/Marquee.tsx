@@ -1,5 +1,6 @@
 import Image from "next/image";
 import idCardIcon from '../../../../../public/images/id-card-icon.svg'
+import { Fragment } from "react/jsx-runtime";
 
 export default function Marquee() {
     const complaints = [
@@ -14,10 +15,10 @@ export default function Marquee() {
         <span className="marquee-component green100-border">
             {complaints.map((complaint) => {
                 return (
-                    <>
-                        <p key={complaint} className="title orange">{complaint}</p>
+                    <Fragment key={complaint}>
+                        <p className="title orange">{complaint}</p>
                         <Image src={idCardIcon} alt={""} />
-                    </>
+                    </Fragment>
                 )
             })}
         </span>
