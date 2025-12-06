@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'sohne';
+  src: url('../../../public/fonts/Söhne-Buch.otf') format("opentype");
+}
+
+:root {
+  background: #FBFAF6;
+}
+
+title,
+h1,
+h5,
+p {
+  font-family: 'sohne';
+}
+
+h1,
+h5 {
+  letter-spacing: -3%;
+  line-height: 120%;
+}
+
+h1 {
+  size: 112pt;
+}
+
+h5 {
+  size: 48pt;
+}
+
+title {
+  size: 12pt
+}
+
+p.xl {
+  size: 28px
+}
+
+p.l {
+  size: 24px
+}
+
+p {
+  letter-spacing: -3%;
+  line-height: 140%;
+  size: 20px
+}
+
+p.s {
+  size: 16px
+}
+
+p.xs {
+  size: 14px
+}
+
+p.xxs {
+  size: 12px
+}
+
+.black {
+  color: #081E13
+}
+
+.black100 {
+  color: #112C2E
+}
+
+.off-white {
+  color: #FBFAF6
+}
+
+.white {
+  color: #FFF
+}
+
+.green500 {
+  color: #152E2A
+}
+
+.green400 {
+  color: #30715D
+}
+
+.green300 {
+  color: #6E9E8F
+}
+
+.green200 {
+  color: #00B684
+}
+
+.green100 {
+  color: #CCDDC7
+}
