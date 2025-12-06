@@ -7,10 +7,6 @@
 
 .marquee-component .marquee-moving-stripe {
     height: 100%;
-}
-
-.marquee-component .marquee-item-container {
-    height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
