@@ -1,0 +1,9 @@
+.card-slide-component .card-slide-stripe {
+    transform: translateX(-44%);
+}
+
+.card-slide-component img.card-item, .front-card-space {
+    padding-right: 81px;
+    width: 394.4px;
+    height: unset;
+}

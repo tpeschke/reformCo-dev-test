@@ -5,7 +5,7 @@
     overflow: hidden;
 }
 
-.marquee-component .marquee-moving-stripe {
+.marquee-component .marquee-stripe {
     height: 100%;
     display: flex;
     justify-content: space-evenly;

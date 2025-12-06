@@ -9,6 +9,7 @@
 .bottom-cards-component .card {
     width: 50%;
     padding: 24px 31px;
+    overflow: hidden;
 }
 
 .bottom-cards-component .card:first-child {

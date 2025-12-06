@@ -108,6 +108,7 @@ img.object-cover {
   opacity: 50%;
 }
 
+/* TODO make sure that the only flex stylings are in here */
 .flex-center {
   display: flex;
   align-items: center;

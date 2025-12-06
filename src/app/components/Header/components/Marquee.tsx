@@ -25,19 +25,16 @@ export default function Marquee() {
     gsap.registerPlugin(useGSAP);
 
     useGSAP(() => {
-        const boxes = gsap.utils.toArray(".marquee-item")
-        horizontalLoop(boxes, {
+        const items = gsap.utils.toArray(".marquee-item")
+        horizontalLoop(items, {
             repeat: -1,
             speed: 0.5
         });
-        // const marqueeItemContainer = document.getElementById('marquee-item-container') as HTMLElement | null
-        // const scrollLength = marqueeItemContainer ? marqueeItemContainer.offsetWidth * -1 : 0
-        // gsap.to(".marquee-item-container", { x: scrollLength, repeat: -1, duration: 1, ease: "linear" });
     });
 
     return (
         <div className="marquee-component green100-border">
-            <div className='marquee-moving-stripe'>
+            <div className='marquee-stripe'>
                 {complaints.map((complaint, index) => {
                     return (
                         <Fragment key={index}>
