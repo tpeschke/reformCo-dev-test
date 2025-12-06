@@ -1,10 +1,13 @@
 .circle-component {
-  border: solid 1.5em hotpink;
-  width: 50vmin;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: hsla(180, 100%, 50%, .5);
-  mask: 
-    linear-gradient(red 0 0) padding-box, 
-    conic-gradient(red var(--p, 17%), transparent 0%) border-box
+    transform: rotate(-35deg);
+    margin: 2px 0;
+    border: solid 1px #ccddc7;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    mask: linear-gradient(transparent 0 0) padding-box, conic-gradient(transparent var(--p, 90%), transparent 0%) border-box;
+}
+
+.button-component .circle {
+    border: 1px solid #ccddc7;
 }
