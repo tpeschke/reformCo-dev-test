@@ -21,11 +21,11 @@ export default function horizontalLoop(items, config) {
   items = gsap.utils.toArray(items);
   config = config || {};
   let tl = gsap.timeline({
-      repeat: config.repeat,
-      paused: config.paused,
-      defaults: { ease: "none" },
-      onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100),
-    }),
+    repeat: config.repeat,
+    paused: config.paused,
+    defaults: { ease: "none" },
+    onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100),
+  }),
     length = items.length,
     startX = items[0].offsetLeft,
     times = [],
@@ -46,19 +46,19 @@ export default function horizontalLoop(items, config) {
       let w = (widths[i] = parseFloat(gsap.getProperty(el, "width", "px")));
       xPercents[i] = snap(
         (parseFloat(gsap.getProperty(el, "x", "px")) / w) * 100 +
-          gsap.getProperty(el, "xPercent")
+        gsap.getProperty(el, "xPercent")
       );
       return xPercents[i];
     },
   });
   gsap.set(items, { x: 0 });
-  
+
   totalWidth =
     items[length - 1].offsetLeft +
     (xPercents[length - 1] / 100) * widths[length - 1] -
     startX +
     items[length - 1].offsetWidth *
-      gsap.getProperty(items[length - 1], "scaleX") +
+    gsap.getProperty(items[length - 1], "scaleX") +
     (parseFloat(config.paddingRight) || 0);
 
   for (i = 0; i < length; i++) {
@@ -71,7 +71,7 @@ export default function horizontalLoop(items, config) {
       item,
       {
         xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
-        duration: distanceToLoop / pixelsPerSecond,
+        duration: distanceToLoop / pixelsPerSecond
       },
       0
     )
@@ -80,7 +80,7 @@ export default function horizontalLoop(items, config) {
         {
           xPercent: snap(
             ((curX - distanceToLoop + totalWidth) / widths[i]) * 100
-          ),
+          )
         },
         {
           xPercent: xPercents[i],

@@ -31,19 +31,20 @@ export default function CardSlide() {
     useGSAP(() => {
         const items: any[] = gsap.utils.toArray(".card-item")
         const timeline = horizontalLoop(items, {
-            paused: true
+            paused: true,
+            ease: "power2.in"
         })
 
         async function scaleItem(items: any[], timeline: gsap.core.Timeline) {
-            timeline.previous({ duration: 2 })
+            timeline.previous({ duration: 2, ease: "power2.inOut" })
             const currentIndex = (timeline.current() + 1) % items.length
 
             let scalingTimeline = gsap.timeline({
                 onComplete: () => { scaleItem(items, timeline) }
             })
             scalingTimeline
-                .to(items[currentIndex], { delay: 2, scale: 1.25, duration: 1 })
-                .to(items[currentIndex], { delay: 1, scale: 1, duration: 1 })
+                .to(items[currentIndex], { delay: 2, scale: 1.25, duration: 1, ease: "power3.inOut" })
+                .to(items[currentIndex], { delay: 1.5, scale: 1, duration: 1, ease: "power3.inOut" })
         }
 
         scaleItem(items, timeline)
