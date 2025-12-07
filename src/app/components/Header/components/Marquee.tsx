@@ -25,6 +25,10 @@ export default function Marquee() {
             repeat: -1,
             speed: 0.5
         });
+
+        gsap.timeline()
+            .to(".marquee-component", { delay: 1, duration: 2.6, width: 0, height: 0, margin: -1})
+            .to(".marquee-component", { duration: 1, opacity: 0})
     });
 
     return (

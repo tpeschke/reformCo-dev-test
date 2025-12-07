@@ -2,8 +2,8 @@
     margin: 7.7vw 0 6.4vw;
     display: flex;
     flex-wrap: wrap;
-    align-items: end;
     justify-content: center;
+    align-items: center;
 }
 
 .header-component h1 {
