@@ -20,16 +20,16 @@ export default function Marquee() {
     gsap.registerPlugin(useGSAP);
 
     useGSAP(() => {
-        // TODO
-        // const items = gsap.utils.toArray(".marquee-item")
-        // horizontalLoop(items, {
-        //     repeat: -1,
-        //     speed: 0.5
-        // });
+        const items = gsap.utils.toArray(".marquee-item")
+        horizontalLoop(items, {
+            repeat: -1,
+            speed: 0.5
+        });
 
-        // gsap.timeline()
-        //     .to(".marquee-component", { delay: 1, duration: 2.6, width: 0, height: 0, margin: -1, ease: "expo.inOut"})
-        //     .to(".marquee-component", { duration: 1, opacity: 0})
+        // Table final margin should be -11
+        gsap.timeline()
+            .to(".marquee-component", { delay: 1, duration: 2.6, width: 0, height: 0, margin: -1, ease: "expo.inOut"})
+            .to(".marquee-component", { duration: 1, opacity: 0})
     });
 
     return (
