@@ -1,5 +1,5 @@
 .button-component {
-    margin: 0px 1px 4px;
+    margin: 0px 0px 8px;
     display: flex;
     justify-content: space-between;
     width: 283px;
@@ -11,7 +11,7 @@
     z-index: 1;
     border: 1px solid #30715D;
     border-radius: 40px;
-    padding: 0px 23px;
+    padding: 0px 24px;
     background: #FBFAF6;
     height: 52px;
     letter-spacing: -0.5px;

@@ -1,16 +1,25 @@
 .header-component {
     margin: 7.7vw 0 6.4vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    gap: 0 21px;
     transition: 0.6s;
 }
 
-.header-component h1 {
-    margin-right: 19px;
+.header-component h1:nth-child(7) {
+    margin-right: 3px;
 }
 
-.header-component h1:last-child {
-    margin-right: 0;
+@media (max-width: 1024px) {
+    .header-component {
+        margin: 21.06vw 0 17.5vw;
+    }
+
+    .header-component .health-insurance:last-child,
+    .header-component .green-phase-1
+    {
+        margin-right: 0;
+    }
+
+    .header-component .line-break {
+        width: 100%;
+    }
 }

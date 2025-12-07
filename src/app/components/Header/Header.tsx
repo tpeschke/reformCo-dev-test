@@ -7,10 +7,11 @@ import { useGSAP } from '@gsap/react';
 
 export default function Header() {
     // I could pre-split these into arrays but I want to keep them readable
-    const part1 = "Health insurance that".split(' ')
-    const part2 = "doesn't".split(' ')
-    const part3 = "get in".split(' ')
-    const part4 = "the way.".split(' ')
+    const part1 = "Health insurance".split(' ')
+    const part2 = "that".split(' ')
+    const part3 = "doesn't".split(' ')
+    const part4 = "get in".split(' ')
+    const part5 = "the way.".split(' ')
 
     gsap.registerPlugin(useGSAP);
 
@@ -25,11 +26,13 @@ export default function Header() {
 
     return (
         <div className="header-component green500 flex-center flex-wrap">
-            {part1.map((part, index) => <h1 key={index}>{part}</h1>)}
-            {part2.map((part, index) => <h1 key={index} className='green-phase-1'>{part}</h1>)}
-            {part3.map((part, index) => <h1 key={index} className='green-phase-2'>{part}</h1>)}
+            {part1.map((part, index) => <h1 className='health-insurance' key={index}>{part}</h1>)}
+            {part2.map((part, index) => <h1 key={index}>{part}</h1>)}
+            {part3.map((part, index) => <h1 key={index} className='green-phase-1'>{part}</h1>)}
+            <div className="line-break"></div>
+            {part4.map((part, index) => <h1 key={index} className='get-in green-phase-2'>{part}</h1>)}
             <Marquee />
-            {part4.map((part, index) => <h1 key={index} className='green-phase-2'>{part}</h1>)}
+            {part5.map((part, index) => <h1 key={index} className='the-way green-phase-2'>{part}</h1>)}
         </div>
     )
 }

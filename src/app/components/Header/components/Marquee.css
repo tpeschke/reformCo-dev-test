@@ -2,7 +2,7 @@
     width: 46vw;
     max-width: 662.4px;
     height: 77px;
-    margin: 25px 39px 0 25px;
+    margin: 26px 19px 0 19px;
     overflow: hidden;
 }
 
@@ -21,4 +21,11 @@
 
 .marquee-component .icon {
     min-width: 77px;
+}
+
+@media (max-width: 1024px) {
+    .marquee-component {
+        width: 30vw;
+        margin: 28px 0 0;
+    }
 }
