@@ -31,8 +31,7 @@ export default function CardSlide() {
     useGSAP(() => {
         const items: any[] = gsap.utils.toArray(".card-item")
         const timeline = horizontalLoop(items, {
-            paused: true,
-            ease: "power2.in"
+            paused: true
         })
 
         async function scaleItem(items: any[], timeline: gsap.core.Timeline) {

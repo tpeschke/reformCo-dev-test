@@ -1,14 +1,19 @@
-.circle-component {
-    transform: rotate(-35deg);
-    margin: 2px 0;
-    border: solid 1px #ccddc7;
-    width: 50px;
-    height: 50px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    mask: linear-gradient(transparent 0 0) padding-box, conic-gradient(transparent var(--p, 90%), transparent 0%) border-box;
+.circle-arrow-button {
+    position: relative;
 }
 
-.circle-component img.inactive {
-    display: none;
+.circle-arrow-button>div {
+    position: absolute;
+    top: 18.5px;
+    left: 17.5px;
+    overflow: hidden;
+    width: 15px;
+    background: #FBFAF6;
+}
+
+.circle-arrow-button .forward-arrow {
+    width: 25px;
+    min-width: 25px;
+    display: flex;
+    justify-content: center;
 }

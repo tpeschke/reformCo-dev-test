@@ -11,15 +11,20 @@ export default function Button() {
     const ease = "power3.in"
 
     const swapButtons = () => {
-        setActiveTagIndex(1)
         gsap.to(".circle-arrow-button", { x: -233, ease })
+        fadeImage(1)
         gsap.to("#main-button", { x: 58, color: '#00B684', border: '1px solid #00B684', ease })
     }
 
     const resetButtons = () => {
-        setActiveTagIndex(0)
         gsap.to(".circle-arrow-button", { x: 0, ease })
+        fadeImage(0)
         gsap.to("#main-button", { x: 0, color: '#30715D', border: '1px solid #30715D', ease })
+    }
+
+    const fadeImage = async (index: 0 | 1) => {
+        await new Promise(resolve => setTimeout(resolve, 200))
+        setActiveTagIndex(index)
     }
 
     return (
