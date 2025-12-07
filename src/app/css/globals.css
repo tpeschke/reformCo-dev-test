@@ -8,6 +8,11 @@
   padding: 32px
 }
 
+.body-container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
 h1,
 h5,
 p {

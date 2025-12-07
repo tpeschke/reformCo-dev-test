@@ -1,5 +1,6 @@
 .marquee-component {
     width: 46vw;
+    max-width: 662.4px;
     height: 77px;
     margin: 25px 39px 0 25px;
     overflow: hidden;
