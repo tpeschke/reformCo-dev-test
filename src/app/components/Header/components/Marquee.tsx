@@ -6,7 +6,7 @@ import idCardIcon from '../../../../../public/images/id-card-icon.svg'
 import { Fragment } from "react/jsx-runtime";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import horizontalLoop from './utilities/horizontalLoop';
+import horizontalLoop from '../../../utilities/horizontalLoop';
 
 export default function Marquee() {
     const complaints = [

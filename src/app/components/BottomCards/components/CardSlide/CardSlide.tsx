@@ -12,7 +12,7 @@ import bott from '../../../../../../public/images/cards/card2.png'
 import alvarez from '../../../../../../public/images/cards/card3.png'
 import wilder from '../../../../../../public/images/cards/card4.png'
 
-import horizontalLoop from '@/app/components/Header/components/utilities/horizontalLoop';
+import horizontalLoop from '@/app/utilities/horizontalLoop';
 
 export default function CardSlide() {
     const insuranceCards = [
@@ -29,14 +29,24 @@ export default function CardSlide() {
     gsap.registerPlugin(useGSAP);
 
     useGSAP(() => {
-        const items = gsap.utils.toArray(".card-item")
+        const items: any[] = gsap.utils.toArray(".card-item")
         const timeline = horizontalLoop(items, {
             paused: true
         })
 
-        setInterval(() => {
-            timeline.next({duration: 0.5})
-        }, 1000)
+        async function scaleItem(items: any[], timeline: gsap.core.Timeline) {
+            timeline.previous({ duration: 2 })
+            const currentIndex = (timeline.current() + 1) % items.length
+
+            let scalingTimeline = gsap.timeline({
+                onComplete: () => { scaleItem(items, timeline) }
+            })
+            scalingTimeline
+                .to(items[currentIndex], { delay: 2, scale: 1.25, duration: 1 })
+                .to(items[currentIndex], { delay: 1, scale: 1, duration: 1 })
+        }
+
+        scaleItem(items, timeline)
     });
 
     return (
@@ -44,7 +54,7 @@ export default function CardSlide() {
             <div className='card-slide-stripe flex-center'>
                 {insuranceCards.map((card, index) => {
                     return (
-                        <div key={index} className='card-item flex-center'>
+                        <div key={index} className={'card-item flex-center ' + index}>
                             <Image src={card} alt={"example insurance card"} />
                         </div>
                     )
