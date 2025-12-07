@@ -8,16 +8,18 @@ import gsap from 'gsap';
 export default function Button() {
     const [activeTagIndex, setActiveTagIndex] = useState<0 | 1>(0)
 
+    const ease = "power3.in"
+
     const swapButtons = () => {
         setActiveTagIndex(1)
-        gsap.to(".circle-arrow-button", { x: -233 })
-        gsap.to("#main-button", { x: 58, color: '#00B684', border: '1px solid #00B684' })
+        gsap.to(".circle-arrow-button", { x: -233, ease })
+        gsap.to("#main-button", { x: 58, color: '#00B684', border: '1px solid #00B684', ease })
     }
 
     const resetButtons = () => {
         setActiveTagIndex(0)
-        gsap.to(".circle-arrow-button", { x: 0 })
-        gsap.to("#main-button", { x: 0, color: '#30715D', border: '1px solid #30715D' })
+        gsap.to(".circle-arrow-button", { x: 0, ease })
+        gsap.to("#main-button", { x: 0, color: '#30715D', border: '1px solid #30715D', ease })
     }
 
     return (
