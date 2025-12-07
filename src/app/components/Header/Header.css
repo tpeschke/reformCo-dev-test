@@ -1,5 +1,5 @@
 .header-component {
-    margin: 7.7vw 0 calc(6.4vw - 32px);
+    margin: 7.7vw 0 6.4vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

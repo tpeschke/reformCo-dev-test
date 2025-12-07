@@ -7,10 +7,12 @@ import background from '../../public/images/test.png'
 
 export default function Home() {
   return (
-    <div className="body-container">
-      {/* <Image className="object-cover" src={background} alt={""} /> */}
-      <Header />
-      <BottomCards />
-    </div>
+    <>
+      <Image className="object-cover" src={background} alt={""} />
+      <div className="body-container">
+        <Header />
+        <BottomCards />
+      </div>
+    </>
   );
 }
