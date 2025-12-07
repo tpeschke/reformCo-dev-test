@@ -1,11 +1,19 @@
 'use client'
 
-import { useEffect, useState } from 'react';
+// Even though this button is only used once in this project, it seems like a component we'd want to reuse
+// in different places on the site so I'm going to pretend like we are and make it reusable.
+
+import { useState } from 'react';
 import './Button.css'
 import Circle from './components/Circle'
 import gsap from 'gsap';
 
-export default function Button() {
+interface Props {
+    children: string,
+    onClick: Function
+}
+
+export default function Button({ children, onClick }: Props) {
     const [activeTagIndex, setActiveTagIndex] = useState<0 | 1>(0)
 
     const ease = "power3.in"
@@ -28,8 +36,8 @@ export default function Button() {
     }
 
     return (
-        <div onClick={_ => alert("Your Quote: $1,000,000 for of 6 discounted band-aids a year.")} className="button-component" onMouseOver={swapButtons} onMouseOut={resetButtons}>
-            <button id='main-button' className="green400">Get a Custom Quote Today</button>
+        <div onClick={event => onClick(event)} className="button-component" onMouseOver={swapButtons} onMouseOut={resetButtons}>
+            <button id='main-button' className="green400">{children}</button>
             <Circle activeTagIndex={activeTagIndex} />
         </div>
     )
