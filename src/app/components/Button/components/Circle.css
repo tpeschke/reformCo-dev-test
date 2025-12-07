@@ -9,6 +9,6 @@
     mask: linear-gradient(transparent 0 0) padding-box, conic-gradient(transparent var(--p, 90%), transparent 0%) border-box;
 }
 
-.button-component .circle {
-    border: 1px solid #ccddc7;
+.circle-component img.inactive {
+    display: none;
 }

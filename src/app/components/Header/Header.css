@@ -1,9 +1,10 @@
 .header-component {
-    margin: 7.7vw 0 6.4vw;
+    margin: 7.7vw 0 calc(6.4vw - 32px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    transition: 0.6s;
 }
 
 .header-component h1 {
