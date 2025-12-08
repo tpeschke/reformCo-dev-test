@@ -29,3 +29,16 @@
         margin: 28px -11px -6px;
     }
 }
+
+@media (max-width: 376px) {
+    .marquee-component {
+        margin: -10px 5px 13px;
+        width: 100vw;
+        height: 61px;
+    }
+
+    .line-break-3 {
+        display: inherit;
+        width: 100%;
+    }
+}

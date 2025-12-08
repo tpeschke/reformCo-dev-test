@@ -6,7 +6,7 @@ import idCardIcon from '../../../../../public/images/id-card-icon.svg'
 import { Fragment } from "react/jsx-runtime";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import horizontalLoop from '../../../utilities/horizontalLoop';
+import horizontalLoop from '@/app/utilities/horizontalLoop';
 
 export default function Marquee() {
     const complaints = [
@@ -27,24 +27,26 @@ export default function Marquee() {
         });
 
         gsap.timeline()
-            .to(".marquee-component", { delay: 1, duration: 2.6, width: 0, height: 0, margin: -11, ease: "expo.inOut"})
-            .to(".marquee-component", { duration: 1, opacity: 0})
+            .to(".marquee-component", { delay: 1, duration: 2.6, width: 0, height: 0, margin: -11, ease: "expo.inOut" })
+            .to(".line-break-3", { duration: .6, width: 0 })
     });
 
     return (
-        <div className="marquee-component green100-border">
-            <div className='marquee-stripe'>
-                {complaints.map((complaint, index) => {
-                    return (
-                        <Fragment key={index}>
-                            <p className="marquee-item title orange">{complaint}</p>
-                            <div className='marquee-item icon flex-center'>
-                                <Image src={idCardIcon} alt={"id card icon"} />
-                            </div>
-                        </Fragment>
-                    )
-                })}
+        <>
+            <div className="marquee-component green100-border">
+                <div className='marquee-stripe'>
+                    {complaints.map((complaint, index) => {
+                        return (
+                            <Fragment key={index}>
+                                <p className="marquee-item title orange">{complaint}</p>
+                                <div className='marquee-item icon flex-center'>
+                                    <Image src={idCardIcon} alt={"id card icon"} />
+                                </div>
+                            </Fragment>
+                        )
+                    })}
+                </div>
             </div>
-        </div>
+        </>
     )
 }

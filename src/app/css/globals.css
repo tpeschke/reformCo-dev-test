@@ -31,6 +31,7 @@ p {
 }
 
 h1,
+/* TODO remove all references to h5 */
 h5 {
   letter-spacing: -3.5px;
   line-height: 91%;
@@ -38,10 +39,7 @@ h5 {
 
 h1 {
   font-size: 112px;
-}
-
-h5 {
-  font-size: 48px;
+  transition: .6s;
 }
 
 p.title {
@@ -128,4 +126,16 @@ button {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+
+@media (max-width: 376px) {
+  :root {
+    padding: 18.5px
+  }
+
+  h1 {
+    font-size: 49px;
+    letter-spacing: -2px;
+    margin-bottom: 13px;
+  }
 }

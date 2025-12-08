@@ -8,11 +8,7 @@
     margin-right: 3px;
 }
 
-.line-break-2 {
-    display: none;
-}
-
-.header-component .line-break {
+.line-break, .line-break-2, .line-break-3 {
     display: none;
 }
 
@@ -42,6 +38,18 @@
     }
 
     .header-component .line-break-2 {
+        display: inherit;
+        width: 100%;
+    }
+}
+
+@media (max-width: 376px) {
+    .header-component {
+        margin: 69.5px 0;
+        gap: 0 9px;
+    }
+
+    .header-component .line-break-3 {
         display: inherit;
         width: 100%;
     }

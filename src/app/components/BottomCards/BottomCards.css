@@ -37,4 +37,8 @@
     .bottom-cards-component {
         flex-direction: column-reverse;
     }
+
+    .bottom-cards-component .card {
+        width: 100%;
+    }
 }
