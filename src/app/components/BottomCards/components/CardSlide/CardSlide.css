@@ -18,3 +18,9 @@
         transform: translate(-.09%, 31.3%);
     }
 }
+
+@media (max-width: 945px) {
+    .card-slide-component .card-slide-stripe {
+        flex-direction: row;
+    }
+}

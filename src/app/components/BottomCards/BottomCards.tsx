@@ -1,16 +1,15 @@
 'use client'
 
 import './BottomCards.css'
-import { useEffect, useState } from 'react';
 import CardSlide from './components/CardSlide/CardSlide'
 import IntroductionCard from './components/IntroductionCard'
-import { addTabletListener, removeTabletListener } from './components/CardSlide/utilities/tabletListener';
-import { addPhoneListener, removePhoneListener } from './components/CardSlide/utilities/phoneListener';
 import { mediaQueryHook } from '@/app/utilities/mediaQueryHook';
 
 export default function BottomCards() {
     const isTablet = mediaQueryHook(1024)
-    const isPhone = mediaQueryHook(376)
+    // Technically, the phone layout doesn't start until width 375px but, after 945, the scaled up cards start overflowing the sides
+    // so it made sense to change the orientation early to create a smooth experience.
+    const isPhone = mediaQueryHook(945)
 
     const cardSlideShouldBeVertical = isTablet && !isPhone
 

@@ -8,18 +8,41 @@
     margin-right: 3px;
 }
 
+.line-break-2 {
+    display: none;
+}
+
+.header-component .line-break {
+    display: none;
+}
+
 @media (max-width: 1024px) {
     .header-component {
         margin: 21.06vw 0 17.6vw;
     }
 
     .header-component .health-insurance:last-child,
-    .header-component .green-phase-1
-    {
+    .header-component .green-phase-1 {
         margin-right: 0;
     }
 
     .header-component .line-break {
+        display: inherit;
+        width: 100%;
+    }
+}
+
+@media (max-width: 945px) {
+    .header-component {
+        margin: 50px 0;
+    }
+
+    .header-component .line-break {
+        display: none;
+    }
+
+    .header-component .line-break-2 {
+        display: inherit;
         width: 100%;
     }
 }

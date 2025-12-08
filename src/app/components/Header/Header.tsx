@@ -10,8 +10,9 @@ export default function Header() {
     const part1 = "Health insurance".split(' ')
     const part2 = "that".split(' ')
     const part3 = "doesn't".split(' ')
-    const part4 = "get in".split(' ')
-    const part5 = "the way.".split(' ')
+    const part4 = "get".split(' ')
+    const part5 = "in".split(' ')
+    const part6 = "the way.".split(' ')
 
     gsap.registerPlugin(useGSAP);
 
@@ -30,9 +31,11 @@ export default function Header() {
             {part2.map((part, index) => <h1 key={index}>{part}</h1>)}
             {part3.map((part, index) => <h1 key={index} className='green-phase-1'>{part}</h1>)}
             <div className="line-break"></div>
-            {part4.map((part, index) => <h1 key={index} className='get-in green-phase-2'>{part}</h1>)}
+            {part4.map((part, index) => <h1 key={index} className='green-phase-2'>{part}</h1>)}
+            <div className="line-break-2"></div>
+            {part5.map((part, index) => <h1 key={index} className='green-phase-2'>{part}</h1>)}
             <Marquee />
-            {part5.map((part, index) => <h1 key={index} className='the-way green-phase-2'>{part}</h1>)}
+            {part6.map((part, index) => <h1 key={index} className='green-phase-2'>{part}</h1>)}
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-type Breakpoints = 376 | 1024
+type Breakpoints = 945 | 1024
 
 const getMediaQuery = (breakpoint: Breakpoints): string => {
     return `(max-width: ${breakpoint}px)`

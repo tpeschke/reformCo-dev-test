@@ -32,3 +32,9 @@
         width: 73%;
     }
 }
+
+@media (max-width: 945px) {
+    .bottom-cards-component {
+        flex-direction: column-reverse;
+    }
+}
