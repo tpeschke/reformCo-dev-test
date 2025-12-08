@@ -12,13 +12,16 @@
     margin-right: 3px;
 }
 
-.line-break, .line-break-2, .line-break-3 {
+.line-break,
+.line-break-2,
+.line-break-3 {
     display: none;
 }
 
 @media (max-width: 1024px) {
-    .h1-container {
-        margin: 21.06vw 0 17.6vw;
+    .header-component {
+        height: 65.1vw;
+        padding: 35px 0 0px;
     }
 
     .h1-container .health-insurance:last-child,

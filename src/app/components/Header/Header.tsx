@@ -35,7 +35,7 @@ export default function Header({ isPhone }: Props) {
             .to(".green-phase-1", { delay: 3.2, duration: 0.4, color: "#30715D" })
             .to(".green-phase-2", { duration: 0.6, color: "#00B684" })
             .to(".green-phase-1", { duration: 0.6, color: "#00B684" })
-            .to(".final-italics", { duration: 1, skewX: -17 })
+            // .to(".final-italics", { duration: 1, skewX: -17 })
     }, [part5, part6]);
 
     return (

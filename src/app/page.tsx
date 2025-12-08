@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <Image className="object-cover" src={desktop} alt={""} />
+      <Image className="object-cover" src={mobile} alt={""} />
       <div className="body-container">
         <Header isPhone={isPhone} />
         <BottomCards isTablet={isTablet} isPhone={isPhone} />
