@@ -26,9 +26,7 @@ export default function Marquee() {
             speed: 0.5
         });
 
-        gsap.timeline()
-            .to(".marquee-component", { delay: 1, duration: 2.6, width: 0, height: 0, margin: -11, ease: "expo.inOut" })
-            .to(".line-break-3", { duration: .6, width: 0 })
+        gsap.to(".marquee-component", { delay: 1, duration: 2.6, width: 0, height: 0, margin: -25, ease: "expo.inOut" })
     });
 
     return (

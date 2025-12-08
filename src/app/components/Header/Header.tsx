@@ -39,16 +39,18 @@ export default function Header({ isPhone }: Props) {
     }, [part5, part6]);
 
     return (
-        <div className="header-component green500 flex-center flex-wrap">
-            {part1.map((part) => <h1 className='health-insurance' key={part}>{part}</h1>)}
-            {part2.map((part) => <h1 key={part}>{part}</h1>)}
-            {part3.map((part) => <h1 key={part} className='green-phase-1 final-italics'>{part}</h1>)}
-            <div className="line-break"></div>
-            {part4.map((part) => <h1 key={part} className='green-phase-2 final-italics'>{part}</h1>)}
-            <div className="line-break-2"></div>
-            {part5.map((part) => <h1 key={part} className='green-phase-2 final-italics'>{part}</h1>)}
-            <Marquee />
-            {part6.map((part) => <h1 key={part} className='green-phase-2 final-italics'>{part}</h1>)}
+        <div className='header-component flex-center'>
+            <div className="h1-container green500 flex-center flex-wrap">
+                {part1.map((part) => <h1 className='health-insurance' key={part}>{part}</h1>)}
+                {part2.map((part) => <h1 key={part}>{part}</h1>)}
+                {part3.map((part) => <h1 key={part} className='green-phase-1 final-italics'>{part}</h1>)}
+                <div className="line-break"></div>
+                {part4.map((part) => <h1 key={part} className='green-phase-2 final-italics'>{part}</h1>)}
+                <div className="line-break-2"></div>
+                {part5.map((part) => <h1 key={part} className='green-phase-2 final-italics'>{part}</h1>)}
+                <Marquee />
+                {part6.map((part) => <h1 key={part} className='green-phase-2 final-italics'>{part}</h1>)}
+            </div>
         </div>
     )
 }

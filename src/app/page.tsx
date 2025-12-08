@@ -5,6 +5,8 @@ import BottomCards from "./components/BottomCards/BottomCards";
 
 // TODO remove
 import Image from "next/image";
+import desktop from '../../public/images/desktop.png'
+import tablet from '../../public/images/tablet.png'
 import mobile from '../../public/images/mobile.png'
 import { mediaQueryHook } from "./utilities/mediaQueryHook";
 
@@ -20,7 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <Image className="object-cover" src={mobile} alt={""} />
+      <Image className="object-cover" src={desktop} alt={""} />
       <div className="body-container">
         <Header isPhone={isPhone} />
         <BottomCards isTablet={isTablet} isPhone={isPhone} />
