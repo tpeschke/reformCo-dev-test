@@ -8,7 +8,11 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import horizontalLoop from '@/app/utilities/horizontalLoop';
 
-export default function Marquee() {
+interface Props {
+    isPhone: boolean
+}
+
+export default function Marquee({ isPhone }: Props) {
     const complaints = [
         "claim denials",
         "frustrated users",
@@ -26,8 +30,9 @@ export default function Marquee() {
             speed: 0.5
         });
 
-        gsap.to(".marquee-component", { delay: 1, duration: 2.6, width: 0, height: 0, margin: -25, ease: "expo.inOut" })
-    });
+        const finalMargin = isPhone ? -11 : -25
+        gsap.to(".marquee-component", { delay: 1, duration: 2.6, width: 0, height: 0, margin: finalMargin, ease: "expo.inOut" })
+    }, [isPhone]);
 
     return (
         <>

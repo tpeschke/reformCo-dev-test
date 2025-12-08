@@ -32,8 +32,8 @@
 
 @media (max-width: 376px) {
     .marquee-component {
-        margin: -10px 5px 13px;
-        width: 100vw;
+        margin: -11px 5px 13px;
+        width: calc(100vw - 48px);
         height: 61px;
     }
 
