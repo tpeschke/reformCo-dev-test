@@ -22,3 +22,13 @@
     width: calc(628px - 10vw);
     max-width: 100%;
 }
+
+@media (max-width: 1024px) {
+    .bottom-cards-component {
+        height: 600px;
+    }
+
+    .bottom-cards-component .card:last-child {
+        width: 73%;
+    }
+}
