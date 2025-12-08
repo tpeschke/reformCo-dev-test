@@ -13,8 +13,13 @@ import alvarez from '../../../../../../public/images/cards/card3.png'
 import wilder from '../../../../../../public/images/cards/card4.png'
 
 import horizontalLoop from '@/app/utilities/horizontalLoop';
+import verticalLoop from '@/app/utilities/verticalLoop';
 
-export default function CardSlide() {
+interface Props {
+    isTablet: boolean
+}
+
+export default function CardSlide({ isTablet }: Props) {
     const insuranceCards = [
         foxx,
         bott,
@@ -30,9 +35,7 @@ export default function CardSlide() {
 
     useGSAP(() => {
         const items: any[] = gsap.utils.toArray(".card-item")
-        const timeline = horizontalLoop(items, {
-            paused: true
-        })
+        const timeline = getTimeline(items)
 
         async function scaleItem(items: any[], timeline: gsap.core.Timeline) {
             timeline.previous({ duration: 2, ease: "power2.inOut" })
@@ -47,7 +50,19 @@ export default function CardSlide() {
         }
 
         scaleItem(items, timeline)
-    });
+    }, [isTablet]);
+
+    const getTimeline = (items: any[]): gsap.core.Timeline => {
+        if (isTablet) {
+            return verticalLoop(items, {
+                paused: true
+            })
+        } else {
+            return horizontalLoop(items, {
+                paused: true
+            })
+        }
+    }
 
     return (
         <div className="card-slide-component flex-center card">

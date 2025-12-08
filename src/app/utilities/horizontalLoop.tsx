@@ -17,7 +17,7 @@ Features:
 - current() - returns the current index (if an animation is in-progress, it reflects the final index)
 - times - an Array of the times on the timeline where each element hits the "starting" spot. There's also a label added accordingly, so "label1" is when the 2nd element reaches the start.
 */
-export default function horizontalLoop(items, config) {
+export default function horizontalLoop(items, config): gsap.core.Timeline {
   items = gsap.utils.toArray(items);
   config = config || {};
   let tl = gsap.timeline({

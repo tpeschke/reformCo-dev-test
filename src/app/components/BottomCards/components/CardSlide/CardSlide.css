@@ -3,11 +3,18 @@
 }
 
 .card-slide-component .card-item {
-    height: 196px;
+    height: 252px;
     width: 487px;
 }
 
 .card-slide-component .card-item>img {
-    width: unset;
-    height: 100%;
+    width: 393px;
+    height: 196px;
+}
+
+@media (max-width: 1024px) {
+    .card-slide-component .card-slide-stripe {
+        flex-direction: column;
+        transform: translate(-.09%, 31.3%);
+    }
 }
