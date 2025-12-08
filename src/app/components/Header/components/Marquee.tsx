@@ -26,9 +26,8 @@ export default function Marquee() {
             speed: 0.5
         });
 
-        // Table final margin should be -11
         gsap.timeline()
-            .to(".marquee-component", { delay: 1, duration: 2.6, width: 0, height: 0, margin: -1, ease: "expo.inOut"})
+            .to(".marquee-component", { delay: 1, duration: 2.6, width: 0, height: 0, margin: -11, ease: "expo.inOut"})
             .to(".marquee-component", { duration: 1, opacity: 0})
     });
 
