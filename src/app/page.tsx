@@ -7,6 +7,8 @@ import desktop from '../../public/images/desktop.png'
 import tablet from '../../public/images/tablet.png'
 import mobile from '../../public/images/mobile.png'
 
+// TODO the current memory is 1.3 GB - can I fix that?
+
 export default function Home() {
   return (
     <>
