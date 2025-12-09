@@ -128,7 +128,13 @@ button {
   flex-direction: column;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 769px) {
+  h1 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 426px) {
   :root {
     padding: 18.5px
   }

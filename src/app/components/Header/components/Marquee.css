@@ -30,11 +30,17 @@
     }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 769px) {
     .marquee-component {
-        margin: -11px 5px 13px;
+        margin: 15px -31px -6px -11px;
         width: calc(100vw - 48px);
         height: 61px;
+    }
+}
+
+@media (max-width: 426px) {
+    .marquee-component {
+        margin: -11px 5px 13px;
     }
 
     .line-break-3 {
