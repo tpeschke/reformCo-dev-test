@@ -17,6 +17,15 @@
         flex-direction: column;
         transform: translate(-0.1%, 31.3%);
     }
+
+    .card-slide-component .card-item {
+        width: unset;
+    }
+
+    .card-slide-component .card-item>img {
+        width: 80%;
+        height: unset;
+    }
 }
 
 @media (max-width: 501px) {
@@ -28,7 +37,7 @@
     .card-slide-component {
         height: 189px;
     }
-    
+
     .card-slide-component .card-item {
         height: 252px;
         width: 238px;

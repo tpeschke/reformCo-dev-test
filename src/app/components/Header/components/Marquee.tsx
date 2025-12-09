@@ -24,14 +24,14 @@ export default function Marquee({ isPhone }: Props) {
     gsap.registerPlugin(useGSAP);
 
     useGSAP(() => {
-        // const items = gsap.utils.toArray(".marquee-item")
-        // horizontalLoop(items, {
-        //     repeat: -1,
-        //     speed: 0.5
-        // });
+        const items = gsap.utils.toArray(".marquee-item")
+        horizontalLoop(items, {
+            repeat: -1,
+            speed: 0.5
+        });
 
-        // const finalMargin = isPhone ? -11 : -25
-        // gsap.to(".marquee-component", { delay: 4.5, duration: 2.6, width: 0, height: 0, margin: finalMargin, ease: "expo.inOut" })
+        const finalMargin = isPhone ? -11 : -25
+        gsap.to(".marquee-component", { delay: 4.5, duration: 2.6, width: 0, height: 0, margin: finalMargin, ease: "expo.inOut" })
     }, [isPhone]);
 
     return (
