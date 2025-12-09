@@ -17,7 +17,7 @@
     letter-spacing: -0.5px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 501px) {
     .button-component {
         margin: 0;
         width: 288px;

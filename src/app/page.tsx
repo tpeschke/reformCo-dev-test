@@ -8,6 +8,7 @@ import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 
 // TODO remove
 import Image from "next/image";
+import desktop from '../../public/images/desktop.png'
 import tablet from '../../public/images/tablet.png'
 
 export default function Home() {

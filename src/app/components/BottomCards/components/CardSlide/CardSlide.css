@@ -4,7 +4,7 @@
 
 .card-slide-component .card-item {
     height: 252px;
-    width: 487px;
+    width: 475px;
 }
 
 .card-slide-component .card-item>img {
@@ -19,7 +19,7 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 501px) {
     .card-slide-component .card-slide-stripe {
         flex-direction: row;
         transform: translate(31.3%, 0%);

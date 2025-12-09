@@ -6,7 +6,6 @@
 
 :root {
   background: #FBFAF6;
-  padding: 32px
 }
 
 .body-container {
@@ -33,7 +32,7 @@ p {
 h1,
 /* TODO remove all references to h5 */
 h5 {
-  letter-spacing: -3.5px;
+  letter-spacing: -3px;
   line-height: 91%;
 }
 
@@ -134,7 +133,7 @@ button {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 501px) {
   :root {
     padding: 18.5px
   }

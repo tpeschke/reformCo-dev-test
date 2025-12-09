@@ -23,21 +23,20 @@
     min-width: 77px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1024px) {
     .marquee-component {
         width: 30vw;
         margin: 28px -31px -6px -11px;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 501px) {
     .marquee-component {
         margin: 15px -31px -6px -11px;
         width: calc(100vw - 48px);
         height: 61px;
     }
 
-    /* TODO */
     /* .marquee-component {
         margin: -11px 5px 13px;
     } */

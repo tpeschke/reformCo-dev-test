@@ -1,10 +1,10 @@
 .header-component {
-    height: 27.2vw;
-    padding: 18px 0 0;
+    height: 387px;
+    padding: 53px 0 0;
 }
 
 .h1-container {
-    gap: 0 21px;
+    gap: 0 24px;
     transition: 0.6s;
 }
 
@@ -20,7 +20,7 @@
 
 @media (max-width: 1024px) {
     .header-component {
-        height: 65.1vw;
+        height: 666px;
         padding: 35px 0 0px;
     }
 
@@ -35,7 +35,7 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 501px) {
     .h1-container .line-break {
         display: none;
     }
