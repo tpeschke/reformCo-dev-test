@@ -7,13 +7,20 @@ export const metadata: Metadata = {
   description: "For ReformCo"
 };
 
+import localFont from 'next/font/local'
+ 
+const sohne = localFont({
+  src: '../../public/fonts/Söhne-Buch.otf',
+})
+ 
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={sohne.className}>
       <body>
         {children}
       </body>
