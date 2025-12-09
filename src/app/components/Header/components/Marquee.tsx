@@ -31,7 +31,7 @@ export default function Marquee({ isPhone }: Props) {
         });
 
         const finalMargin = isPhone ? -11 : -25
-        gsap.to(".marquee-component", { delay: 1, duration: 2.6, width: 0, height: 0, margin: finalMargin, ease: "expo.inOut" })
+        gsap.to(".marquee-component", { delay: 4.5, duration: 2.6, width: 0, height: 0, margin: finalMargin, ease: "expo.inOut" })
     }, [isPhone]);
 
     return (

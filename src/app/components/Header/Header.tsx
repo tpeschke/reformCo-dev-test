@@ -4,7 +4,7 @@ import './Header.css'
 import Marquee from "./components/Marquee"
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 
 interface Props {
     isPhone: boolean
@@ -20,6 +20,7 @@ export default function Header({ isPhone }: Props) {
     const [part6, setPart6] = useState<string[]>(["", "the", "way."])
 
 
+
     useEffect(() => {
         setPart5((isPhone ? '' : "in").split(' '))
         setPart6((isPhone ? 'in the way.' : " the way.").split(' '))
@@ -29,7 +30,7 @@ export default function Header({ isPhone }: Props) {
 
     useGSAP(() => {
         gsap.timeline()
-            .set(".green-phase-1", { color: "#152E2A" })
+            .set(".green-phase-1", { delay: 3.5, color: "#152E2A" })
             .set(".green-phase-2", { color: "#152E2A" })
             .set(".final-italics", { skewX: 0 })
             .to(".green-phase-1", { delay: 3.2, duration: 0.4, color: "#30715D" })

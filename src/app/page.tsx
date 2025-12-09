@@ -3,14 +3,8 @@
 import Header from "./components/Header/Header";
 import BottomCards from "./components/BottomCards/BottomCards";
 
-// TODO remove
-import Image from "next/image";
-import desktop from '../../public/images/desktop.png'
-import tablet from '../../public/images/tablet.png'
-import mobile from '../../public/images/mobile.png'
 import { mediaQueryHook } from "./utilities/mediaQueryHook";
-
-// TODO add fade in to hide ugly jump
+import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 
 export default function Home() {
   const isTablet = mediaQueryHook(1024)
@@ -20,7 +14,12 @@ export default function Home() {
 
   return (
     <>
-      {/* <Image className="object-cover" src={tablet} alt={""} /> */}
+      {/* 
+        Because "in" on the header can be before or after the Marquee, it can jump in a disconcerting way so 
+        I'm add a loading screen here to screen the component while it assumes its final form so that the user
+        has a smoother experience.
+       */}
+      <LoadingScreen />
       <div className="body-container">
         <Header isPhone={isPhone} />
         <BottomCards isTablet={isTablet} isPhone={isPhone} />
