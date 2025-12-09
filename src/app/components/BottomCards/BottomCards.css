@@ -36,9 +36,27 @@
 @media (max-width: 945px) {
     .bottom-cards-component {
         flex-direction: column-reverse;
+        justify-content: start;
+        width: calc(100vw - 48px);
+        margin: 0 auto;
+        height: 395px;
     }
 
-    .bottom-cards-component .card {
-        width: 100%;
+    .bottom-cards-component .card:last-child {
+        width: unset;
+        padding: 0;
+    }
+
+    .bottom-cards-component .card:first-child {
+        border-top: 1px solid #CCDDC7;
+        border-right: unset;
+        width: unset;
+        padding: 15px 19px;
+        height: 175px;
+    }
+
+    .bottom-cards-component .card:first-child p {
+        font-size: 15px;
+        letter-spacing: -0.9px;
     }
 }

@@ -10,9 +10,7 @@ import tablet from '../../public/images/tablet.png'
 import mobile from '../../public/images/mobile.png'
 import { mediaQueryHook } from "./utilities/mediaQueryHook";
 
-// TODO the current memory is 1.3 GB - can I fix that?
-
-// TODO add fading to hide ugly jump
+// TODO add fade in to hide ugly jump
 
 export default function Home() {
   const isTablet = mediaQueryHook(1024)

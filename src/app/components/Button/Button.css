@@ -16,3 +16,14 @@
     height: 52px;
     letter-spacing: -0.5px;
 }
+
+@media (max-width: 376px) {
+    .button-component {
+        margin: 0;
+        width: 288px;
+    }
+
+    .button-component button {
+        padding: 0 27px;
+    }
+}

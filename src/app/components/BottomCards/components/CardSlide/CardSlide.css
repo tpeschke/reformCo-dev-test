@@ -15,12 +15,29 @@
 @media (max-width: 1024px) {
     .card-slide-component .card-slide-stripe {
         flex-direction: column;
-        transform: translate(-.09%, 31.3%);
+        transform: translate(30%, -19.2%);
     }
 }
 
 @media (max-width: 945px) {
     .card-slide-component .card-slide-stripe {
         flex-direction: row;
+        transform: translate(31.3%, 0%);
+    }
+}
+
+@media (max-width: 376px) {
+    .card-slide-component {
+        height: 189px;
+    }
+    
+    .card-slide-component .card-item {
+        height: 252px;
+        width: 238px;
+    }
+
+    .card-slide-component .card-item>img {
+        width: unset;
+        height: 98px;
     }
 }
