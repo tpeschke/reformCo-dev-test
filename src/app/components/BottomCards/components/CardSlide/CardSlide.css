@@ -19,7 +19,7 @@
     }
 }
 
-@media (max-width: 945px) {
+@media (max-width: 500px) {
     .card-slide-component .card-slide-stripe {
         flex-direction: row;
         transform: translate(31.3%, 0%);

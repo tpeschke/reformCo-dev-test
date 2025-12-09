@@ -6,11 +6,15 @@ import BottomCards from "./components/BottomCards/BottomCards";
 import { mediaQueryHook } from "./utilities/mediaQueryHook";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 
+// TODO remove
+import Image from "next/image";
+import tablet from '../../public/images/tablet.png'
+
 export default function Home() {
   const isTablet = mediaQueryHook(1024)
   // Technically, the phone layout doesn't start until width 375px but, after 945, the scaled up cards start overflowing the sides
   // so it made sense to change the orientation early to create a smooth experience.
-  const isPhone = mediaQueryHook(945)
+  const isPhone = mediaQueryHook(500)
 
   return (
     <>
@@ -20,6 +24,7 @@ export default function Home() {
         has a smoother experience.
        */}
       <LoadingScreen />
+      <Image className="object-cover" src={tablet} alt={""}/>
       <div className="body-container">
         <Header isPhone={isPhone} />
         <BottomCards isTablet={isTablet} isPhone={isPhone} />

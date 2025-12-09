@@ -33,7 +33,7 @@
     }
 }
 
-@media (max-width: 945px) {
+@media (max-width: 500px) {
     .bottom-cards-component {
         flex-direction: column-reverse;
         justify-content: start;

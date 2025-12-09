@@ -134,7 +134,7 @@ button {
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 500px) {
   :root {
     padding: 18.5px
   }
