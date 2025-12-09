@@ -1,20 +1,49 @@
 'use client'
 
-// Even though this button is only used once in this project, it seems like a component we'd want to reuse
-// in different places on the site so I'm going to pretend like we are and make it reusable.
-
 import { useState } from 'react';
 import './Button.css'
 import Circle from './components/Circle'
+
+import { useGSAP } from "@gsap/react";
 import gsap from 'gsap';
+import horizontalLoop from '@/app/utilities/horizontalLoop';
 
 interface Props {
-    children: string,
-    onClick: Function
+    children: string
 }
 
-export default function Button({ children, onClick }: Props) {
+export default function Button({ children }: Props) {
     const [activeTagIndex, setActiveTagIndex] = useState<0 | 1>(0)
+
+    gsap.registerPlugin(useGSAP);
+
+    useGSAP(() => {
+        if (activeTagIndex === 1) {
+            const timeline = createTimeline()
+
+            const animateArrow = () => {
+                if (timeline) {
+                    timeline.previous({ duration: 0.6 })
+                    createTimeline()
+                }
+            }
+
+            document.getElementById("button-component")?.addEventListener("click", animateArrow)
+        }
+    }, [activeTagIndex]);
+
+    const createTimeline = (): gsap.core.Timeline | null => {
+        const items: any[] = gsap.utils.toArray(".forward-arrow")
+        if (items.length > 0) {
+            const timeline = horizontalLoop(items, {
+                paused: true
+            })
+
+            return timeline
+        }
+
+        return null
+    }
 
     const ease = "power3.in"
 
@@ -36,7 +65,7 @@ export default function Button({ children, onClick }: Props) {
     }
 
     return (
-        <div onClick={event => onClick(event)} className="button-component" onMouseOver={swapButtons} onMouseOut={resetButtons}>
+        <div id="button-component" className="button-component" onMouseOver={swapButtons} onMouseOut={resetButtons}>
             <button id='main-button' className="green400">{children}</button>
             <Circle activeTagIndex={activeTagIndex} />
         </div>
