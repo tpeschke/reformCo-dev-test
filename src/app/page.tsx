@@ -10,6 +10,7 @@ import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 import Image from "next/image";
 import desktop from '../../public/images/desktop.png'
 import tablet from '../../public/images/tablet.png'
+import mobile from '../../public/images/mobile.png'
 
 export default function Home() {
   const isTablet = mediaQueryHook(1024)

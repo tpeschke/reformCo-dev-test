@@ -127,20 +127,10 @@ button {
   flex-direction: column;
 }
 
-@media (max-width: 769px) {
-  h1 {
-    font-size: 80px;
-  }
-}
-
 @media (max-width: 501px) {
-  :root {
-    padding: 18.5px
-  }
-
   h1 {
     font-size: 49px;
     letter-spacing: -2px;
-    margin-bottom: 13px;
+    margin-bottom: 14px;
   }
 }

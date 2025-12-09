@@ -21,7 +21,11 @@
 @media (max-width: 1024px) {
     .header-component {
         height: 666px;
-        padding: 35px 0 0px;
+        padding: 67px 0 0px;
+    }
+
+    .h1-container {
+        gap: 0 19px
     }
 
     .h1-container .health-insurance:last-child,
@@ -46,8 +50,8 @@
     }
 
     .header-component {
-        height: 353px;
-        padding: 20px 0 0;
+        height: 363px;
+        padding: 29.5px 0px 0px;
     }
 
     .h1-container {
