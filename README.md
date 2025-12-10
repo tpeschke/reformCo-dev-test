@@ -35,5 +35,4 @@ It is a simple, one-page app showcasing my proficiency with following a Figma de
 I've left notes in various parts of the application explaining some of my thoughts and decisions. I wouldn't normally do that in a project but I thought it might be enlightening to the reviewers.
 
 # TODOS
-- Left Card Sizing Error
 - Loading Screen jitter
