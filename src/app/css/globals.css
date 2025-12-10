@@ -12,14 +12,13 @@ p {
   font-weight: 100;
 }
 
+
 h1 {
   letter-spacing: -3px;
   line-height: 91%;
-}
-
-h1 {
   font-size: 112px;
   transition: .6s;
+  color: #153E2A
 }
 
 p.title {
