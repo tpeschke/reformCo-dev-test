@@ -9,10 +9,10 @@
 
 .button-component button {
     z-index: 1;
-    border: 1px solid #30715D;
+    border: 1px solid var(--green400);
     border-radius: 40px;
     padding: 0px 24px;
-    background: #FBFAF6;
+    background: var(--off-white);
     height: 52px;
     letter-spacing: -0.5px;
 }

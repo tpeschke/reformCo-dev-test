@@ -1,5 +1,5 @@
 .bottom-cards-component {
-    border: 1px solid #CCDDC7;
+    border: 1px solid var(--green100);
     border-radius: 3px;
     height: 328px;
     width: calc(100vw - 64px);
@@ -15,7 +15,7 @@
 }
 
 .bottom-cards-component .card:first-child {
-    border-right: 1px solid #CCDDC7;
+    border-right: 1px solid var(--green100);
 }
 
 .bottom-cards-component .card:first-child p {
@@ -48,7 +48,7 @@
     }
 
     .bottom-cards-component .card:first-child {
-        border-top: 1px solid #CCDDC7;
+        border-top: 1px solid var(--green100);
         border-right: unset;
         width: unset;
         padding: 15px 19px;

@@ -35,16 +35,16 @@ export default function Header({ isPhone }: Props) {
     return (
         <div className='header-component flex-center'>
             <div className="h1-container flex-center flex-wrap">
-                <h1 className='health-insurance'>Health insurance</h1>
+                <h1 className='health-insurance green500'>Health insurance</h1>
                 <div className="line-break"></div>
-                <h1>that</h1>
-                <h1 className='green-phase-1 final-italics'>doesn't</h1>
+                <h1 className='green500'>that</h1>
+                <h1 className='green-phase-1 final-italics green500'>doesn't</h1>
                 <div className="line-break"></div>
-                <h1 className='green-phase-2 final-italics'>get</h1>
+                <h1 className='green-phase-2 final-italics green500'>get</h1>
                 <div className="line-break-2"></div>
-                <h1 className='green-phase-2 final-italics'>{part5}</h1>
+                <h1 className='green-phase-2 final-italics green500'>{part5}</h1>
                 <Marquee isPhone={isPhone} />
-                <h1 className='green-phase-2 final-italics'>{part6}</h1>
+                <h1 className='green-phase-2 final-italics green500'>{part6}</h1>
             </div>
         </div>
     )

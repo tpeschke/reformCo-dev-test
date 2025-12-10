@@ -1,5 +1,13 @@
 :root {
-  background: #FBFAF6;
+  --off-white: #FBFAF6;
+  --green500: #153E2A;
+  --green400: #30715D;
+  --green200:  #00B684;
+  --green100: #CCDDC7;
+
+  --orange: #D87906;
+
+  background: var(--off-white);
 }
 
 .body-container {
@@ -18,7 +26,6 @@ h1 {
   line-height: 91%;
   font-size: 112px;
   transition: .6s;
-  color: #153E2A
 }
 
 p.title {
@@ -34,25 +41,25 @@ p {
   font-size: 20px
 }
 
-.off-white {
-  color: #FBFAF6
+.green500 {
+  color: var(--green500)
 }
 
 .green400 {
-  color: #30715D
+  color: var(--green400)
 }
 
 .green200 {
-  color: #00B684
+  color: var(--green200)
 }
 
 .green100-border {
-  border: 1px solid #CCDDC7;
+  border: 1px solid var(--green100);
   border-radius: 10px;
 }
 
 .orange {
-  color: #D87906
+  color: var(--orange)
 }
 
 button {

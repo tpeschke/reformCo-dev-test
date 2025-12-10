@@ -1,6 +1,6 @@
 .loading-screen-component {
     position: absolute;
-    background: #FBFAF6;
+    background: var(--off-white);
     top: 0;
     left: 0;
     width: 100%;
