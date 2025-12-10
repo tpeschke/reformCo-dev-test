@@ -36,6 +36,4 @@ I've left notes in various parts of the application explaining some of my though
 
 # TODOS
 - Left Card Sizing Error
-- Card visibility amount
-- Card Order
 - Loading Screen jitter
