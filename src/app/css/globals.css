@@ -2,7 +2,7 @@
   --off-white: #FBFAF6;
   --green500: #153E2A;
   --green400: #30715D;
-  --green200:  #00B684;
+  --green200: #00B684;
   --green100: #CCDDC7;
 
   --orange: #D87906;
@@ -24,6 +24,7 @@ h1 {
   letter-spacing: -3px;
   line-height: 91%;
   font-size: 112px;
+  text-align: center;
   transition: .6s;
 }
 
