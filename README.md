@@ -1,10 +1,8 @@
 TODO Update the readme with information about this site. (Nitpick)
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+Run one of the following:
 
 ```bash
 npm run dev
@@ -18,19 +16,12 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## About
 
-## Learn More
+This project is to showcase my skills to [Reform Collective](https://www.reformcollective.com/) in hopes that they'll like it and pay me to do this full time and for money.
 
-To learn more about Next.js, take a look at the following resources:
+It is a simple, one-page app showcasing my proficiency with following a Figma design, applying animation, and general React / Next.js understanding as well as communication when ambiguities arise in the design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+I've left notes 
