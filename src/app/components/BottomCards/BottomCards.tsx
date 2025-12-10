@@ -1,13 +1,12 @@
+import { mediaQueryHook } from '@/app/utilities/mediaQueryHook'
 import './BottomCards.css'
 import CardSlide from './components/CardSlide/CardSlide'
 import IntroductionCard from './components/IntroductionCard'
 
-interface Props {
-    isTablet: boolean,
-    isPhone: boolean
-}
+export default function BottomCards() {
+    const isTablet = mediaQueryHook(1024)
+    const isPhone = mediaQueryHook(500)
 
-export default function BottomCards({ isTablet, isPhone }: Props) {
     const cardSlideShouldBeVertical = isTablet && !isPhone
 
     return (

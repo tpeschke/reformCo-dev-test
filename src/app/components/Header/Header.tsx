@@ -4,13 +4,12 @@ import './Header.css'
 import Marquee from "./components/Marquee"
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { mediaQueryHook } from '@/app/utilities/mediaQueryHook';
 
-interface Props {
-    isPhone: boolean
-}
+export default function Header() {
+    const isPhone = mediaQueryHook(500)
 
-export default function Header({ isPhone }: Props) {
     const [part5, setPart5] = useState<string>("in")
     const [part6, setPart6] = useState<string>("the way.")
 
