@@ -8,8 +8,6 @@ import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 
 export default function Home() {
   const isTablet = mediaQueryHook(1024)
-  // Technically, the phone layout doesn't start until width 375px but, after 945, the scaled up cards start overflowing the sides
-  // so it made sense to change the orientation early to create a smooth experience.
   const isPhone = mediaQueryHook(500)
 
   return (
