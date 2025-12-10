@@ -8,8 +8,9 @@ export default function LoadingScreen() {
 
     useGSAP(() => {
         gsap.timeline()
-            .to(".loading-header", { duration: 1, rotation: 1800, ease: "power2.inOut" })
-            .to(".loading-screen-component", { delay: 1, duration: 1, height: 0, ease: "power2.in" })
+            .to(".loading-header", { duration: 0.5, scale: 1.25, ease: "power1.out" })
+            .to(".loading-header", { duration: 0.5, scale: 1, ease: "power1.out" })
+            .to(".loading-screen-component", { delay: 1, duration: 1, opacity: 0, ease: "power2.in" })
             .set(".loading-screen-component", { display: 'none' })
     });
 
