@@ -27,7 +27,7 @@
 @media (max-width: 1024px) {
     .card-slide-component .card-slide-stripe {
         flex-direction: column;
-        transform: translate(1.2vw, 14.5vw);
+        transform: translate(1.2vw, 64vw);
     }
 
     .card-slide-component {

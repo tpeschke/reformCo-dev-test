@@ -34,23 +34,22 @@ export default function CardSlide({ isTablet }: Props) {
     gsap.registerPlugin(useGSAP);
 
     useGSAP(() => {
-        // TODO Restore
-        // const items: any[] = gsap.utils.toArray(".card-item")
-        // const timeline = getTimeline(items)
+        const items: any[] = gsap.utils.toArray(".card-item")
+        const timeline = getTimeline(items)
 
-        // async function scaleItem(items: any[], timeline: gsap.core.Timeline) {
-        //     timeline.previous({ duration: 2, ease: "power2.inOut" })
-        //     const currentIndex = (timeline.current() + 1) % items.length
+        async function scaleItem(items: any[], timeline: gsap.core.Timeline) {
+            timeline.previous({ duration: 2, ease: "power2.inOut" })
+            const currentIndex = (timeline.current() + 1) % items.length
 
-        //     let scalingTimeline = gsap.timeline({
-        //         onComplete: () => { scaleItem(items, timeline) }
-        //     })
-        //     scalingTimeline
-        //         .to(items[currentIndex], { delay: 2, scale: 1.25, duration: 1, ease: "power3.inOut" })
-        //         .to(items[currentIndex], { delay: 1.5, scale: 1, duration: 1, ease: "power3.inOut" })
-        // }
+            let scalingTimeline = gsap.timeline({
+                onComplete: () => { scaleItem(items, timeline) }
+            })
+            scalingTimeline
+                .to(items[currentIndex], { delay: 2, scale: 1.25, duration: 1, ease: "power3.inOut" })
+                .to(items[currentIndex], { delay: 1.5, scale: 1, duration: 1, ease: "power3.inOut" })
+        }
 
-        // scaleItem(items, timeline)
+        scaleItem(items, timeline)
     }, [isTablet]);
 
     const getTimeline = (items: any[]): gsap.core.Timeline => {

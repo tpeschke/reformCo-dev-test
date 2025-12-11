@@ -1,5 +1,3 @@
-TODO Update the readme with information about this site. (Nitpick)
-
 # Getting Started
 
 ## Install Packages
@@ -36,8 +34,8 @@ I've left notes in various parts of the application explaining some of my though
 
 # TODOS
 
-- Double check card slide animations
-  - Desktop
-  - Tablet
+- Marquee shrinkage
   - Mobile
+  - Tablet
+  - Desktop
 - Go over CSS files, condense
