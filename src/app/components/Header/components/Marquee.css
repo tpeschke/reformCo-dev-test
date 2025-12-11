@@ -1,8 +1,9 @@
 .marquee-component {
-    width: 49vw;
+    width: 45.8vw;
     max-width: 662.4px;
-    height: 77px;
-    margin: 26px -9px 0 18px;
+    height: 5.5vw;
+    max-height: 77px;
+    margin: 2vw 1vw 0 2.1vw;
     overflow: hidden;
 }
 
@@ -23,22 +24,25 @@
     min-width: 77px;
 }
 
+@media (min-width: 1440px) {
+    .marquee-component {
+        height: 77px;
+        margin: 26px 12px 0 19px;
+    }
+}
+
 @media (max-width: 1024px) {
     .marquee-component {
         width: 30vw;
-        margin: 29px -11px -6px -7px;
+        margin: 1.8vw -1.2vw -.6vw -1.1vw;
+        height: 8vw;
     }
 }
 
 @media (max-width: 501px) {
     .marquee-component {
-        margin: 0px auto 13px;
-        width: calc(100vw - 53px);
-        height: 61px;
-    }
-
-    .line-break-3 {
-        display: inherit;
-        width: 100%;
+        width: 87vw;
+        height: 16.5vw;
+        margin: 0 auto 2vw
     }
 }

@@ -1,65 +1,59 @@
 .header-component {
-    height: 387px;
-    padding: 53px 0 0;
+    height: 26.8vw;
+    max-height: 387px;
+    padding: 3.77vw 0 0;
 }
 
 .h1-container {
-    gap: 0 24px;
+    gap: 0 1.4vw;
+    margin: 0 2.2vw;
     transition: 0.6s;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .h1-container h1:nth-child(7) {
     margin-right: 3px;
 }
 
-.line-break,
-.line-break-2,
-.line-break-3 {
-    display: none;
+@media (min-width: 1440px) {
+    .header-component {
+        height: 387px;
+        padding: 53px 0 0;
+        gap: 0 24px;
+    }
+
+    .h1-container {
+        margin: 0 26px;
+    }
 }
 
 @media (max-width: 1024px) {
     .header-component {
-        height: 666px;
-        padding: 67px 0 0px;
+        height: 65.2vw;
+        max-height: unset;
+        padding: 6.6vw 0px 0;
     }
 
     .h1-container {
-        gap: 0 19px
+        gap: 0 1.5vw;
+        justify-content: space-evenly;
     }
 
     .h1-container .health-insurance:last-child,
     .h1-container .green-phase-1 {
         margin-right: 0;
     }
-
-    .h1-container .line-break {
-        display: inherit;
-        width: 100%;
-    }
 }
 
 @media (max-width: 501px) {
-    .h1-container .line-break {
-        display: none;
-    }
-
-    .h1-container .line-break-2 {
-        display: inherit;
-        width: 100%;
-    }
-
     .header-component {
-        height: 363px;
-        padding: 29.5px 0px 0px;
+        height: 96vw;
+        padding-top: 8.3vw;
     }
 
     .h1-container {
-        gap: 0 9px;
-    }
-
-    .h1-container .line-break-3 {
-        display: inherit;
-        width: 100%;
+        margin: 0 5vw;
     }
 }

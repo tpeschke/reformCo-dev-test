@@ -5,6 +5,13 @@ import BottomCards from "./components/BottomCards/BottomCards";
 
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 
+// TODO Remove
+import Image from "next/image";
+import desktop from '../../public/images/desktop.png'
+import tablet from '../../public/images/tablet.png'
+import mobile from '../../public/images/mobile.png'
+
+
 export default function Home() {
   return (
     <>
@@ -15,6 +22,7 @@ export default function Home() {
        */}
       <LoadingScreen />
       <div className="body-container">
+        <Image className="background-template" src={mobile} alt={""} />
         <Header />
         <BottomCards />
       </div>

@@ -30,10 +30,11 @@ export default function Marquee({ isPhone }: Props) {
             speed: 0.5
         });
 
-        const finalMargin = isPhone ? -11 : -15
-        gsap.timeline()
-            .to(".marquee-component", { delay: 4.5, duration: 2.6, width: 0, height: 0, margin: finalMargin, ease: "expo.inOut" })
-            .to(".marquee-component", { duration: 1, opacity: 0, ease: "expo.inOut" })
+        // TODO Restore
+        // const finalMargin = isPhone ? -11 : -15
+        // gsap.timeline()
+        //     .to(".marquee-component", { delay: 4.5, duration: 2.6, width: 0, height: 0, margin: finalMargin, ease: "expo.inOut" })
+        //     .to(".marquee-component", { duration: 1, opacity: 0, ease: "expo.inOut" })
     }, [isPhone]);
 
     return (
