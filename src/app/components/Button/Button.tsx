@@ -48,9 +48,9 @@ export default function Button({ children }: Props) {
     const ease = "power3.in"
 
     const swapButtons = () => {
-        gsap.to(".circle-arrow-button", { x: -233, ease })
+        gsap.to(".circle-arrow-button", { xPercent: -468, ease })
         fadeImage(1)
-        gsap.to("#main-button", { x: 58, color: '#00B684', border: '1px solid #00B684', ease })
+        gsap.to("#main-button", { xPercent: 24, color: '#00B684', border: '1px solid #00B684', ease })
     }
 
     const resetButtons = () => {

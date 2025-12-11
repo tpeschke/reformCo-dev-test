@@ -17,3 +17,15 @@
     display: flex;
     justify-content: center;
 }
+
+@media (max-width: 501px) {
+    .outer-circle {
+        width: 13.5vw;
+        height: 13.5vw;
+    }
+
+    .circle-arrow-button>div {
+        width: 5vw;
+        height: 5vw;
+    }
+}

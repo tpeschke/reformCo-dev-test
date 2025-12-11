@@ -24,10 +24,10 @@
 }
 
 @media (min-width: 1440px) {
-.bottom-cards-component .card:first-child p {
-    letter-spacing: -.7px;
-    width: 79%;
-}
+    .bottom-cards-component .card:first-child p {
+        letter-spacing: -.7px;
+        width: 79%;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -44,25 +44,28 @@
     .bottom-cards-component {
         flex-direction: column-reverse;
         justify-content: start;
-        width: calc(100vw - 48px);
-        height: 395px;
+        width: 87vw;
+        height: 105.5vw;
     }
 
     .bottom-cards-component .card:last-child {
         width: unset;
         padding: 0;
+        height: 50.5vw;
     }
 
     .bottom-cards-component .card:first-child {
         border-top: 1px solid var(--green100);
         border-right: unset;
         width: unset;
-        padding: 15px 19px;
-        height: 175px;
+        height: 44%;
+        padding: 4vw 5vw;
     }
 
     .bottom-cards-component .card:first-child p {
-        font-size: 15px;
-        letter-spacing: -0.9px;
+        letter-spacing: -0.23vw;
+        font-size: 4vw;
+        width: 76vw;
+        line-height: 5.3vw;
     }
 }

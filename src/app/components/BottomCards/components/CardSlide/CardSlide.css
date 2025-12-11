@@ -31,20 +31,20 @@
 @media (max-width: 501px) {
     .card-slide-component .card-slide-stripe {
         flex-direction: row;
-        transform: translate(31.3%, 0%);
+        transform: translateX(31.2%);
     }
 
     .card-slide-component {
-        height: 189px;
+        height: 51vw;
     }
 
     .card-slide-component .card-item {
-        height: 252px;
-        width: 238px;
+        width: 63.5vw;
+        height: 51vw;
     }
 
     .card-slide-component .card-item>img {
         width: unset;
-        height: 98px;
+        height: 26vw;
     }
 }

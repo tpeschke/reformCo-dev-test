@@ -20,10 +20,14 @@
 @media (max-width: 501px) {
     .button-component {
         margin: 0;
-        width: 288px;
+        width: 77vw;
     }
 
     .button-component button {
-        padding: 0 27px;
+        width: 62vw;
+        height: 13.5vw;
+        margin-bottom: .5vw;
+        font-size: 4vw;
+        letter-spacing: 0.01vw;
     }
 }

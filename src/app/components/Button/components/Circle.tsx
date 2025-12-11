@@ -16,7 +16,7 @@ export default function Circle({ activeTagIndex }: Props) {
         case 0:
             return (
                 <div className='circle-arrow-button'>
-                    <Image src={arrowCircleGreen400} alt={"id card icon"} />
+                    <Image className='outer-circle' src={arrowCircleGreen400} alt={"green partial circle around arrow"} />
                     <div className='flex-center'>
                         <div className='forward-arrow'>
                             <Image src={arrowGreen400} alt={"forward arrow"} />
@@ -33,7 +33,7 @@ export default function Circle({ activeTagIndex }: Props) {
         case 1:
             return (
                 <div id="active-forward-arrow" className='circle-arrow-button'>
-                    <Image src={arrowCircleGreen200} alt={"id card icon"} />
+                    <Image className='outer-circle' src={arrowCircleGreen200} alt={"green partial circle around arrow"} />
                     <div className='flex-center'>
                         <div className='forward-arrow'>
                             <Image src={arrowGreen200} alt={"forward arrow"} />
