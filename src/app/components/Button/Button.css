@@ -17,6 +17,22 @@
     letter-spacing: -0.5px;
 }
 
+@media (max-width: 1024px) {
+    .button-component {
+        margin: 0;
+        width: 27.9vw;
+    }
+
+    .button-component button {
+        padding: 0 0vw;
+        letter-spacing: -0.07vw;
+        width: 22.4vw;
+        height: 4.9vw;
+        margin-bottom: 1.3vw;
+        font-size: 1.6vw;
+    }
+}
+
 @media (max-width: 501px) {
     .button-component {
         margin: 0;

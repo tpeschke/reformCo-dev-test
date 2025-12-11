@@ -22,7 +22,7 @@ export default function Home() {
        */}
       <LoadingScreen />
       <div className="body-container">
-        <Image className="background-template" src={tablet} alt={""} />
+        <Image className="background-template" src={desktop} alt={""} />
         <Header />
         <BottomCards />
       </div>

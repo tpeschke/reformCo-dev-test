@@ -15,16 +15,21 @@
 @media (max-width: 1024px) {
     .card-slide-component .card-slide-stripe {
         flex-direction: column;
-        transform: translate(-0.1%, 31.3%);
+        transform: translate(0.2%, 6.9%);
+    }
+
+    .card-slide-component {
+        height: 51vw;
     }
 
     .card-slide-component .card-item {
-        width: unset;
+        width: 54.5vw;
+        height: 24.7vw;
     }
 
     .card-slide-component .card-item>img {
-        width: 80%;
-        height: unset;
+        width: unset;
+        height: 19vw;
     }
 }
 
