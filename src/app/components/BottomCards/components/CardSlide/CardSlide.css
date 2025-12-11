@@ -12,6 +12,18 @@
     height: 13.6vw;
 }
 
+@media (min-width: 1440px) {
+    .card-slide-component .card-item {
+        width: 476px;
+        height: 327px;
+    }
+
+    .card-slide-component .card-item>img {
+        width: unset;
+        height: 195.2px;
+    }
+}
+
 @media (max-width: 1024px) {
     .card-slide-component .card-slide-stripe {
         flex-direction: column;
