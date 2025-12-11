@@ -36,11 +36,11 @@ I've left notes in various parts of the application explaining some of my though
 
 # TODOS
 
-- Over 1440px on heading is weird
-- @1440px is a bit weird
+- In Figma, the left and right cards on the bottom are off by two pixels
+  - I can probably calculate the percentages for each side from there
+- Double Check button animation
 - Double check card slide animations
   - Desktop
   - Tablet
   - Mobile
-- Double Check button animation
 - Go over CSS files, condense

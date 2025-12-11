@@ -20,6 +20,21 @@
     font-size: 1.2vw;
 }
 
+@media (min-width: 1440px) {
+    .button-component {
+        width: 283px;
+    }
+
+    .button-component button {
+        letter-spacing: -.5px;
+        width: 228px;
+        height: 50px;
+        margin-bottom: 10px;
+        padding: 0 0;
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 1024px) {
     .button-component {
         margin: 0;

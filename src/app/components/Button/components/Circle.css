@@ -18,7 +18,6 @@
 }
 
 .circle-arrow-button .forward-arrow {
-    width: 4vw;
     min-width: 4vw;
     display: flex;
     justify-content: center;
@@ -27,6 +26,29 @@
 .circle-arrow-button .forward-arrow>img {
     width: 1vw;
     height: 1vw;
+}
+
+@media (min-width: 1440px) {
+    .outer-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle-arrow-button>div {
+        width: 15px;
+        height: 15px;
+        top: 18px;
+        left: 18px;
+    }
+
+    .circle-arrow-button .forward-arrow {
+        min-width: 20px;
+    }
+
+    .circle-arrow-button .forward-arrow>img {
+        width: 14px;
+        height: 14px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -43,7 +65,6 @@
     }
 
     .circle-arrow-button .forward-arrow {
-        width: 4vw;
         min-width: 4vw;
     }
 
@@ -67,7 +88,6 @@
     }
 
     .circle-arrow-button .forward-arrow {
-        width: 8vw;
         min-width: 8vw;
     }
 

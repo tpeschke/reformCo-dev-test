@@ -2,7 +2,6 @@
     border: 1px solid var(--green100);
     border-radius: 3px;
     width: 95.5vw;
-    max-width: 1440px;
     height: 22.7vw;
     display: flex;
     margin: 0 auto;
@@ -26,9 +25,29 @@
 }
 
 @media (min-width: 1440px) {
+    .bottom-cards-component {
+        width: 1376px;
+        height: 328px;
+    }
+
+    .bottom-cards-component .card {
+        padding: 23px 32px;
+    }
+
+    .bottom-cards-component .card:first-child {
+        /* Why would you make them off by two pixels, you monsters? */
+        width: 689px
+    }
+
     .bottom-cards-component .card:first-child p {
         letter-spacing: -.7px;
         width: 79%;
+        font-size: 24px;
+        line-height: 140%;
+    }
+
+    .bottom-cards-component .card:last-child {
+        width: 687px
     }
 }
 
