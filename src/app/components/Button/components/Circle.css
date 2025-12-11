@@ -1,20 +1,32 @@
+.outer-circle {
+    width: 3.5vw;
+    height: 3.5vw;
+}
+
 .circle-arrow-button {
     position: relative;
 }
 
 .circle-arrow-button>div {
     position: absolute;
-    top: 18.5px;
-    left: 17.5px;
+    width: 2vw;
+    height: 2vw;
+    top: .8vw;
+    left: .8vw;
     overflow: hidden;
-    width: 15px;
     background: var(--off-white);
 }
 
 .circle-arrow-button .forward-arrow {
-    width: 25px;
+    width: 4vw;
+    min-width: 4vw;
     display: flex;
     justify-content: center;
+}
+
+.circle-arrow-button .forward-arrow>img {
+    width: 1vw;
+    height: 1vw;
 }
 
 @media (max-width: 1024px) {
@@ -31,7 +43,6 @@
     }
 
     .circle-arrow-button .forward-arrow {
-        justify-content: center;
         width: 4vw;
         min-width: 4vw;
     }
@@ -56,7 +67,6 @@
     }
 
     .circle-arrow-button .forward-arrow {
-        justify-content: center;
         width: 8vw;
         min-width: 8vw;
     }

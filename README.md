@@ -33,3 +33,14 @@ It is a simple, one-page app showcasing my proficiency with following a Figma de
 ## Notes
 
 I've left notes in various parts of the application explaining some of my thoughts and decisions. I wouldn't normally do that in a project but I thought it might be enlightening to the reviewers.
+
+# TODOS
+
+- Over 1440px on heading is weird
+- @1440px is a bit weird
+- Double check card slide animations
+  - Desktop
+  - Tablet
+  - Mobile
+- Double Check button animation
+- Go over CSS files, condense

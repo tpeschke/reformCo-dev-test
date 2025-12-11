@@ -3,13 +3,13 @@
 }
 
 .card-slide-component .card-item {
-    height: 252px;
-    width: 475px;
+    width: 33.1vw;
+    height: 22.7vw;
 }
 
 .card-slide-component .card-item>img {
-    width: 393px;
-    height: 196px;
+    width: unset;
+    height: 13.6vw;
 }
 
 @media (max-width: 1024px) {
@@ -28,7 +28,6 @@
     }
 
     .card-slide-component .card-item>img {
-        width: unset;
         height: 19vw;
     }
 }
@@ -49,7 +48,6 @@
     }
 
     .card-slide-component .card-item>img {
-        width: unset;
         height: 26vw;
     }
 }

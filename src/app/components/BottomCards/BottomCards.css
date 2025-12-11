@@ -1,16 +1,16 @@
 .bottom-cards-component {
     border: 1px solid var(--green100);
     border-radius: 3px;
-    height: 328px;
-    width: calc(100vw - 64px);
+    width: 95.5vw;
     max-width: 1440px;
+    height: 22.7vw;
     display: flex;
     margin: 0 auto;
 }
 
 .bottom-cards-component .card {
-    width: 50%;
-    padding: 22px 31px;
+    width: 44vw;
+    padding: 1.5vw 2.2vw;
     overflow: hidden;
 }
 
@@ -19,8 +19,10 @@
 }
 
 .bottom-cards-component .card:first-child p {
-    letter-spacing: -0.05vw;
+    letter-spacing: -0.02vw;
     width: 34vw;
+    font-size: 1.6vw;
+    line-height: 2.37vw;
 }
 
 @media (min-width: 1440px) {
