@@ -24,6 +24,12 @@
     min-width: 77px;
 }
 
+.marquee-shell {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 @media (min-width: 1440px) {
     .marquee-component {
         height: 77px;
@@ -44,5 +50,9 @@
         width: 87vw;
         height: 16.5vw;
         margin: 0 auto 2vw
+    }
+
+    .marquee-shell {
+        width: 100%;
     }
 }

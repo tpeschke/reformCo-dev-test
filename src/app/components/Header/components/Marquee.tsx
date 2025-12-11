@@ -7,12 +7,16 @@ import { Fragment } from "react/jsx-runtime";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import horizontalLoop from '@/app/utilities/horizontalLoop';
+import { mediaQueryHook } from '@/app/utilities/mediaQueryHook';
 
 interface Props {
     isPhone: boolean
 }
 
 export default function Marquee({ isPhone }: Props) {
+    const isTablet = mediaQueryHook(1024)
+    const isBeyondDesktop = mediaQueryHook(1441)
+    
     const complaints = [
         "claim denials",
         "frustrated users",
@@ -30,14 +34,15 @@ export default function Marquee({ isPhone }: Props) {
             speed: 0.5
         });
 
-        const finalMargin = isPhone ? -11 : -15
+        const finalMargin = getFinalMargin(isPhone, isTablet, isBeyondDesktop)
         gsap.timeline()
             .to(".marquee-component", { delay: 4.5, duration: 2.6, width: 0, height: 0, margin: finalMargin, ease: "expo.inOut" })
-            .to(".marquee-component", { duration: 1, opacity: 0, ease: "expo.inOut" })
+            .to(".marquee-shell", { duration: 1, margin: finalMargin, ease: "expo.inOut" }, "-=1.75")
+            .to(".marquee-shell", { duration: 1, opacity: 0, ease: "expo.inOut" })
     }, [isPhone]);
 
     return (
-        <>
+        <div className='marquee-shell'>
             <div className="marquee-component green100-border">
                 <div className='marquee-stripe'>
                     {complaints.map((complaint, index) => {
@@ -52,6 +57,18 @@ export default function Marquee({ isPhone }: Props) {
                     })}
                 </div>
             </div>
-        </>
+        </div>
     )
+}
+
+function getFinalMargin(isPhone: Boolean, isTablet: Boolean, isBeyondDesktop: Boolean) {
+    if (isPhone) {
+        return '-23vw'
+    } else if (isTablet) {
+        return '-16vw'
+    } else if (isBeyondDesktop) {
+        return '-25px'
+    } else {
+        return '-0.7vw'
+    }
 }

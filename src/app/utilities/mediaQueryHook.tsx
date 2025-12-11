@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react";
 
-type Breakpoints = 500 | 1024
+type Breakpoints = 500 | 1024 | 1441
 
 const getMediaQuery = (breakpoint: Breakpoints): string => {
-    return `(max-width: ${breakpoint}px)`
+    switch (breakpoint) {
+        case 500:
+        case 1024:
+            return `(max-width: ${breakpoint}px)`
+        default:
+            return `(min-width: ${breakpoint}px)`
+    }
 };
 
 export const mediaQueryHook = (breakpoint: Breakpoints): boolean => {

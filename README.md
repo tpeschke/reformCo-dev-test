@@ -34,8 +34,4 @@ I've left notes in various parts of the application explaining some of my though
 
 # TODOS
 
-- Marquee shrinkage
-  - Mobile
-  - Tablet
-  - Desktop
 - Go over CSS files, condense
