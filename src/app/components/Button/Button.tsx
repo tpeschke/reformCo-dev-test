@@ -54,9 +54,9 @@ export default function Button({ children }: Props) {
     }
 
     const resetButtons = () => {
-        gsap.to(".circle-arrow-button", { x: 0, ease })
+        gsap.to(".circle-arrow-button", { xPercent: 0, ease })
         fadeImage(0)
-        gsap.to("#main-button", { x: 0, color: '#30715D', border: '1px solid #30715D', ease })
+        gsap.to("#main-button", { xPercent: 0, color: '#30715D', border: '1px solid #30715D', ease })
     }
 
     const fadeImage = async (index: 0 | 1) => {

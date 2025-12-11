@@ -22,7 +22,8 @@ export default function Home() {
        */}
       <LoadingScreen />
       <div className="body-container">
-        <Image className="background-template" src={mobile} alt={""} />
+        {/* TODO Remove */}
+        {/* <Image className="background-template" src={mobile} alt={""} /> */}
         <Header />
         <BottomCards />
       </div>

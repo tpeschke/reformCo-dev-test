@@ -36,9 +36,6 @@ I've left notes in various parts of the application explaining some of my though
 
 # TODOS
 
-- In Figma, the left and right cards on the bottom are off by two pixels
-  - I can probably calculate the percentages for each side from there
-- Double Check button animation
 - Double check card slide animations
   - Desktop
   - Tablet
