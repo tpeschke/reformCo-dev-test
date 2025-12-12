@@ -34,6 +34,7 @@ export default function Header() {
             .to(".green-phase-2", { duration: 0.6, color: "#00B684" })
             .to(".green-phase-1", { duration: 0.6, color: "#00B684" })
             // I've noticed that "doesn't" starts skewing a little ahead of the rest of the header but I couldn't figure out why
+            // I don't think anyone would notice; I might be hallucinating it since I've stared so long as this animation.
             .to(".final-italics", { duration: 1, skewX: -17 })
     }, [isPhone, isTablet, isDesktop, isBeyondDesktop]);
 
