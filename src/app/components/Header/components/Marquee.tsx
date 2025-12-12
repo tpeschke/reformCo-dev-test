@@ -30,7 +30,9 @@ export default function Marquee({ isPhone, isTablet, isDesktop, isBeyondDesktop 
             repeat: -1,
             speed: 0.5
         });
+    });
 
+    useGSAP(() => {
         const finalMargin = getFinalMargin(isPhone, isTablet, isBeyondDesktop)
 
         gsap.timeline()
