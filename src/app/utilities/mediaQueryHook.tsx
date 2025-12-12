@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-type Breakpoints = 500 | 1024 | 1441
+type Breakpoints = 500 | 1024 | 1440 | 1441
 
 const getMediaQuery = (breakpoint: Breakpoints): string => {
     switch (breakpoint) {

@@ -5,16 +5,15 @@ import { Fragment } from "react/jsx-runtime";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import horizontalLoop from '@/app/utilities/horizontalLoop';
-import { mediaQueryHook } from '@/app/utilities/mediaQueryHook';
 
 interface Props {
-    isPhone: boolean
+    isPhone: boolean,
+    isTablet: boolean,
+    isDesktop: boolean,
+    isBeyondDesktop: boolean,
 }
 
-export default function Marquee({ isPhone }: Props) {
-    const isTablet = mediaQueryHook(1024)
-    const isBeyondDesktop = mediaQueryHook(1441)
-
+export default function Marquee({ isPhone, isTablet, isDesktop, isBeyondDesktop }: Props) {
     const complaints = [
         "claim denials",
         "frustrated users",
@@ -34,10 +33,12 @@ export default function Marquee({ isPhone }: Props) {
 
         const finalMargin = getFinalMargin(isPhone, isTablet, isBeyondDesktop)
         gsap.timeline()
+            .set(".marquee-component", { clearProps: "all" })
+            .set(".marquee-shell", { clearProps: "all" })
             .to(".marquee-component", { delay: 4.5, duration: 2.6, width: 0, height: 0, margin: finalMargin, ease: "expo.in" })
             .to(".marquee-shell", { duration: 2, height: 0, margin: finalMargin, ease: "expo.in" }, "-=2")
             .to(".marquee-shell", { duration: 1, opacity: 0, ease: "expo.in" })
-    }, [isPhone]);
+    }, [isPhone, isTablet, isDesktop, isBeyondDesktop]);
 
     return (
         <div className='marquee-shell'>
