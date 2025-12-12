@@ -15,7 +15,7 @@ export default function Header() {
     const [part3, setPart3] = useState<string>("the way.")
 
     useEffect(() => {
-        setPart1(isPhone ? ' get' : "")
+        setPart1(isPhone ? 'get' : "")
         setPart2(isPhone ? '' : "get in")
         setPart3(isPhone ? 'in the way.' : " the way.")
     }, [isPhone])
@@ -38,9 +38,9 @@ export default function Header() {
             <div className="h1-container">
                 <h1 className='health-insurance green500'>
                     Health insurance
-                    <span className='green500'> that</span>
-                    <span className='green-phase-1 final-italics green500'> doesn't</span>
-                    <span className='green-phase-2 final-italics green500'>{part1}</span>
+                    <span className='green500'>&nbsp;that</span>
+                    <span className='green-phase-1 final-italics green500'>&nbsp;doesn't</span>
+                    <span className='green-phase-2 final-italics green500'>&nbsp;{part1}</span>
                 </h1>
                 <h1 className='green-phase-2 final-italics green500'>{part2}</h1>
                 <Marquee isPhone={isPhone} />

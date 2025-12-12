@@ -1,5 +1,3 @@
-'use client'
-
 import './Marquee.css'
 import Image from "next/image";
 import idCardIcon from '../../../../../public/images/id-card-icon.svg'
@@ -16,7 +14,7 @@ interface Props {
 export default function Marquee({ isPhone }: Props) {
     const isTablet = mediaQueryHook(1024)
     const isBeyondDesktop = mediaQueryHook(1441)
-    
+
     const complaints = [
         "claim denials",
         "frustrated users",
@@ -36,9 +34,9 @@ export default function Marquee({ isPhone }: Props) {
 
         const finalMargin = getFinalMargin(isPhone, isTablet, isBeyondDesktop)
         gsap.timeline()
-            .to(".marquee-component", { delay: 4.5, duration: 2.6, width: 0, height: 0, margin: finalMargin, ease: "expo.inOut" })
-            .to(".marquee-shell", { duration: 1, margin: finalMargin, ease: "expo.inOut" }, "-=1.75")
-            .to(".marquee-shell", { duration: 1, opacity: 0, ease: "expo.inOut" })
+            .to(".marquee-component", { delay: 4.5, duration: 2.6, width: 0, height: 0, margin: finalMargin, ease: "expo.in" })
+            .to(".marquee-shell", { duration: 2, height: 0, margin: finalMargin, ease: "expo.in" }, "-=2")
+            .to(".marquee-shell", { duration: 1, opacity: 0, ease: "expo.in" })
     }, [isPhone]);
 
     return (
@@ -69,6 +67,6 @@ function getFinalMargin(isPhone: Boolean, isTablet: Boolean, isBeyondDesktop: Bo
     } else if (isBeyondDesktop) {
         return '-25px'
     } else {
-        return '-0.7vw'
+        return '-1.7vw'
     }
 }

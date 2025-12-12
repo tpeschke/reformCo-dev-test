@@ -29,6 +29,10 @@ h1 {
   transition: .6s;
 }
 
+h1 span {
+  display: inline-block;
+}
+
 p.title {
   font-size: 12px
 }

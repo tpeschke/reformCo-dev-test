@@ -53,6 +53,7 @@
     }
 
     .marquee-shell {
-        width: 100%;
+        min-width: 87vw;
+        min-height: 16.5vw;
     }
 }
