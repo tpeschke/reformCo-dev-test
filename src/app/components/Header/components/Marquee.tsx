@@ -32,11 +32,12 @@ export default function Marquee({ isPhone, isTablet, isDesktop, isBeyondDesktop 
         });
 
         const finalMargin = getFinalMargin(isPhone, isTablet, isBeyondDesktop)
+
         gsap.timeline()
             .set(".marquee-component", { clearProps: "all" })
             .set(".marquee-shell", { clearProps: "all" })
             .to(".marquee-component", { delay: 4.5, duration: 2.6, width: 0, height: 0, margin: finalMargin, ease: "expo.in" })
-            .to(".marquee-shell", { duration: 2, height: 0, margin: finalMargin, ease: "expo.in" }, "-=2")
+            .to(".marquee-shell", getShellAnimationParams(isPhone, finalMargin), "-=2")
             .to(".marquee-shell", { duration: 1, opacity: 0, ease: "expo.in" })
     }, [isPhone, isTablet, isDesktop, isBeyondDesktop]);
 
@@ -70,4 +71,12 @@ function getFinalMargin(isPhone: Boolean, isTablet: Boolean, isBeyondDesktop: Bo
     } else {
         return '-1.7vw'
     }
+}
+
+function getShellAnimationParams(isPhone: Boolean, finalMargin: string) {
+    if (isPhone) {
+        return { delay: 1, duration: 2, height: 0, marginTop: finalMargin, ease: "expo.in" }
+    }
+
+    return { duration: 2, height: 0, margin: finalMargin, ease: "expo.in" }
 }
